@@ -336,13 +336,13 @@ const QUESTIONS = [
       },
       {
         "key": "ex",
-        "ar": "تهديد خارجي، لأن الملفات غادرت الخادم فلم يعد الفاعل داخلياً.",
-        "en": "An external threat, because the files left the server so the actor is no longer internal."
+        "ar": "تهديد خارجي: الحساب بعد الفصل لم يعد حساب موظف، فالحذف يُحسب هجوماً من خارج المؤسسة.",
+        "en": "An external threat: after dismissal the account is no longer a staff account, so the deletion counts as an attack from outside."
       },
       {
         "key": "nat",
-        "ar": "كارثة طبيعية، لأن الإدارة لا تسيطر على قرار موظف يغادر.",
-        "en": "A natural disaster, because management does not control a departing employee’s decision."
+        "ar": "إفصاح عرضي: الموظف ظن أن حذف الجداول جزء من تسليم العهدة، فالسبب ضعف التدريب.",
+        "en": "Accidental disclosure: the employee thought deleting the spreadsheets was part of handing over, so the cause is weak training."
       }
     ],
     "correct": "in",
@@ -355,8 +355,8 @@ const QUESTIONS = [
       "en": "Work that depends on those spreadsheets may stop."
     },
     "miss": {
-      "ar": "حذف الملفات لا يجعل الفاعل خارجياً، وليس قوة طبيعية كالحريق أو الفيضان.",
-      "en": "Deleting files does not make the actor external, and it is not a natural force such as fire or flood."
+      "ar": "الفاعل ما زال من داخل المؤسسة وحذف الجداول عمداً في آخر يوم عمل. هذا ليس خطأ إرسال، وخروجه الوشيك لا يحوّله إلى مهاجم خارجي.",
+      "en": "The actor was still inside the organisation and deleted the spreadsheets on purpose on the last day. This is not a mistaken send, and being about to leave does not make the person an outside attacker."
     }
   },
   {
@@ -378,13 +378,13 @@ const QUESTIONS = [
       },
       {
         "key": "ran",
-        "ar": "برنامج فدية، لأن المال انتقل مقابل بيانات.",
-        "en": "Ransomware, because money changed hands in return for data."
+        "ar": "تجسس تجاري من الخارج: الشركة المنافسة هي التي اخترقت النظام للحصول على الرواتب.",
+        "en": "Commercial spying from outside: the rival company broke in to obtain the payroll."
       },
       {
         "key": "fw",
-        "ar": "عطل في جدار الحماية فقط، لأن البيانات خرجت من الشبكة.",
-        "en": "Only a firewall failure, because the data left the network."
+        "ar": "إفصاح عرضي: أُرسلت الكشوف إلى عنوان خاطئ لأن الموظف لم يُدرَّب على البريد.",
+        "en": "Accidental disclosure: the files were sent to the wrong address because the employee was not trained on email."
       }
     ],
     "correct": "un",
@@ -397,8 +397,8 @@ const QUESTIONS = [
       "en": "The company loses confidentiality of staff data and may breach its duty to protect personal data."
     },
     "miss": {
-      "ar": "الفدية تقفل الملفات وتطلب مفتاحاً، لا بيع نسخة. وخروج البيانات قد يبدأ من حساب موظف حتى لو كان الجدار سليماً.",
-      "en": "Ransomware locks files and demands a key; it is not the sale of a copy. Data can leave through a staff account even when the firewall is working."
+      "ar": "الموظف نفسه نسخ الكشوف وباعها، فهذا وصول داخلي لمكسب شخصي. ليس اختراقاً نفّذه المنافس، ولا إرسالاً بالخطأ.",
+      "en": "The employee copied the payroll and sold it, which is internal access for personal gain. The rival did not break in, and this was not a mis-sent email."
     }
   },
   {
@@ -420,13 +420,13 @@ const QUESTIONS = [
       },
       {
         "key": "ph",
-        "ar": "تصيد احتيالي، لأن رسالة بريد غادرت الشركة.",
-        "en": "Phishing, because an email left the company."
+        "ar": "تهديد داخلي متعمد: إرسال سعر التكلفة يعني أن الموظف قصد إضرار الشركة.",
+        "en": "A deliberate internal threat: sending the cost price means the employee meant to harm the company."
       },
       {
         "key": "dos",
-        "ar": "قطع خدمة، لأن العميل استلم معلومة لم يطلبها.",
-        "en": "A denial of service, because the customer received information they did not ask for."
+        "ar": "فشل تشفير البريد: السر خرج لأن الرسالة لم تُشفَّر، والتدريب لا يمنع ذلك.",
+        "en": "An email-encryption failure: the secret left because the message was not encrypted, and training would not stop that."
       }
     ],
     "correct": "acc",
@@ -439,8 +439,8 @@ const QUESTIONS = [
       "en": "A rival or a customer gains pricing information that should not leave the firm."
     },
     "miss": {
-      "ar": "التصيد يخدع الشخص ليكشف سراً، وهذا الموظف أرسل السر بنفسه. وقطع الخدمة يوقف النظام بكثرة الطلبات لا برسالة واحدة.",
-      "en": "Phishing tricks a person into revealing a secret; here the employee sent it himself. Denial of service stops a system with a flood of requests, not with one email."
+      "ar": "الحالة خطأ من موظف غير مدرَّب، لا نية انتقام. تشفير الرسالة لا يمنع صاحباً مخوَّلاً من إرسال السر بنفسه إلى العميل.",
+      "en": "This is a mistake by an untrained employee, not an intent to harm. Encrypting the message does not stop an authorised person from sending the secret to the customer."
     }
   },
   {
@@ -462,13 +462,13 @@ const QUESTIONS = [
       },
       {
         "key": "sql",
-        "ar": "حقن لغة استعلام، لأن البيانات ظهرت على شاشة.",
-        "en": "Structured Query Language injection, because data appeared on a screen."
+        "ar": "النظرة لا تكفي: الحادث يبدأ فقط إذا صوّر الزائر الشاشة أو نسخ منها.",
+        "en": "A glance is not enough: the incident starts only if the visitor photographs the screen or copies from it."
       },
       {
         "key": "wep",
-        "ar": "فشل تشفير لاسلكي، لأن الشاشة قريبة من الباب.",
-        "en": "A wireless encryption failure, because the screen is near the door."
+        "ar": "تشفير قاعدة الحجز يكفي، لأن البيانات المشفّرة لا تُقرأ من شاشة مفتوحة أمام الزائر.",
+        "en": "Encrypting the booking database is enough, because encrypted data cannot be read from a screen left open in front of a visitor."
       }
     ],
     "correct": "vis",
@@ -481,8 +481,8 @@ const QUESTIONS = [
       "en": "A medical or commercial secret can leak from a glance, with no technical intrusion."
     },
     "miss": {
-      "ar": "ظهور البيانات على الشاشة ليس تغييراً لأمر قاعدة البيانات، ولا علاقة له بمعيار الشبكة اللاسلكية.",
-      "en": "Data on a screen is not a changed database command, and it is not a wireless-standard failure."
+      "ar": "الكتاب يعد ترك الزائر وحده والشاشة الظاهرة تهديداً بمجرد النظرة، بلا حاجة إلى تصوير. تشفير القرص لا يخفي بيانات معروضة أصلاً على الشاشة.",
+      "en": "The textbook treats a visitor left alone with a visible screen as a threat from the glance itself, with no need for a photograph. Disk encryption does not hide data already shown on the screen."
     }
   },
   {
@@ -504,13 +504,13 @@ const QUESTIONS = [
       },
       {
         "key": "ad",
-        "ar": "برنامج دعائي: الرسالة إعلان منبثق مزعج في العادة.",
-        "en": "Adware: the message is a popup advert, usually only a nuisance."
+        "ar": "حصان طروادة: المرفق بدا ملفاً عادياً وأخفى البرنامج، وطلب البيتكوين مجرد وسيلة دفع.",
+        "en": "A Trojan: the attachment looked like an ordinary file and hid the program. The Bitcoin demand is only a way to pay."
       },
       {
         "key": "sp",
-        "ar": "برنامج تجسس: يجمع عادات التصفح من دون قفل الملفات.",
-        "en": "Spyware: it collects browsing habits and does not lock the files."
+        "ar": "فيروس متنقل: قفل الملفات يعني أنه نسخ نفسه عبر الجهاز ثم طلب أجراً على الإزالة.",
+        "en": "A worm: locking the files means it copied itself across the computer, then charged a fee to remove itself."
       }
     ],
     "correct": "rw",
@@ -523,8 +523,8 @@ const QUESTIONS = [
       "en": "Work stops while the files are unreadable, and paying does not guarantee recovery."
     },
     "miss": {
-      "ar": "الدعائي يعرض إعلانات. والتجسس يسرق معلومات. كلاهما لا يقايض الملفات بمفتاح.",
-      "en": "Adware shows adverts. Spyware steals information. Neither trades files for a key."
+      "ar": "التنكر أو النسخ قد يصف طريقة الوصول، لكن علامة الفدية في الكتاب هي تشفير الملفات ثم طلب المفتاح. حصان طروادة يُعرَّف بالتنكر، والمتنقل بنسخ نفسه بين الأجهزة.",
+      "en": "Disguise or copying may describe how it arrived, but the textbook’s sign of ransomware is encrypting the files and then demanding the key. A Trojan is defined by disguise, and a worm by copying itself between computers."
     }
   },
   {
@@ -546,13 +546,13 @@ const QUESTIONS = [
       },
       {
         "key": "ad",
-        "ar": "برنامج دعائي يستهدف الإعلانات ولا يرسل ضغطات المفاتيح.",
-        "en": "Adware aimed at adverts, which does not send keystrokes."
+        "ar": "فيروس جذر: البرنامج مختبئ ويرسل ما يُكتب إلى الخارج، وهذا وصول بعيد.",
+        "en": "A rootkit: the program is hidden and sends what is typed outside, which is remote access."
       },
       {
         "key": "av",
-        "ar": "أداة مكافحة فيروسات تسجل المفاتيح لحماية الحساب.",
-        "en": "Antivirus software recording keys to protect the account."
+        "ar": "حصان طروادة: سرقة كلمات المرور تتم عبر ملف يبدو بريئاً، لا عبر تسجيل المفاتيح.",
+        "en": "A Trojan: password theft happens through a file that looks innocent, not through recording keystrokes."
       }
     ],
     "correct": "key",
@@ -565,8 +565,8 @@ const QUESTIONS = [
       "en": "A leaked password opens accounts without breaking encryption."
     },
     "miss": {
-      "ar": "البرامج الدعائية تجمع غالباً عادات التصفح. ومكافحة الفيروسات تفحص الملفات ولا ترسل ما يكتبه المستخدم إلى مجرم.",
-      "en": "Adware usually collects browsing habits. Antivirus scans files; it does not send what the user types to a criminal."
+      "ar": "الاختباء مع إرسال الكتابة لا يعني التحكم بالجهاز من بُعد. الكتاب يضع مسجل النقرات ضمن برامج التجسس ولو لم يُذكر ملف متنكر.",
+      "en": "Hiding and sending keystrokes is not the same as controlling the computer remotely. The textbook places a keylogger inside spyware even when no disguised file is mentioned."
     }
   },
   {
@@ -588,13 +588,13 @@ const QUESTIONS = [
       },
       {
         "key": "troj",
-        "ar": "حصان طروادة، لأن أي برنامج ينتشر لا بد أن يبدو تحديثاً شرعياً.",
-        "en": "A Trojan, because anything that spreads must look like a legitimate update."
+        "ar": "فيروس يحتاج إلى المستخدم: فتح المرفق يمنع تسميته متنقلاً، فالمتنقل ينتشر بلا أي تدخل.",
+        "en": "A virus that needs the user: opening the attachment stops it being a worm, because a worm spreads with no help at all."
       },
       {
         "key": "root",
-        "ar": "فيروس جذر، لأن انتقاله إلى جهاز ثانٍ يعني أنه مختبئ.",
-        "en": "A rootkit, because moving to a second computer means it is hidden."
+        "ar": "حصان طروادة: وصوله داخل مرفق يعني أن صفته الأساسية التنكر، لا نسخ نفسه إلى أجهزة أخرى.",
+        "en": "A Trojan: arriving inside an attachment means its defining trait is disguise, not copying itself to other computers."
       }
     ],
     "correct": "worm",
@@ -607,8 +607,8 @@ const QUESTIONS = [
       "en": "One infected computer can become the source of spread across the whole organisation."
     },
     "miss": {
-      "ar": "حصان طروادة يُعرف بالتنكر. وفيروس الجذر يُعرف بإخفاء نفسه ومنح وصول بعيد. الانتشار الذاتي هو صفة المتنقل.",
-      "en": "A Trojan is defined by disguise. A rootkit is defined by hiding and allowing remote access. Self-copying is the worm’s trait."
+      "ar": "الكتاب يعرّف المتنقل بنسخ نفسه عبر أجهزة كثيرة، عادة على الشبكة. فتح المرفق الأول لا يلغي هذه الصفة، والحالة لا تذكر أن الملف بدا تحديثاً شرعياً.",
+      "en": "The textbook defines a worm by copying itself across many computers, usually on a network. Opening the first attachment does not remove that trait, and the case does not say the file looked like a legitimate update."
     }
   },
   {
@@ -630,13 +630,13 @@ const QUESTIONS = [
       },
       {
         "key": "worm",
-        "ar": "فيروس متنقل، لأن اسم الملف يقول إنه تحديث.",
-        "en": "A worm, because the file name says it is an update."
+        "ar": "فيروس متنقل: ما دام اسم الملف «تحديث» فسينسخ نفسه إلى أجهزة الشبكة.",
+        "en": "A worm: once the file is named an update, it will copy itself to computers on the network."
       },
       {
         "key": "patch",
-        "ar": "تحديث أمني حقيقي، لأن الشركة الناشرة تستخدم الملفات المجانية.",
-        "en": "A real security update, because vendors distribute free fix files."
+        "ar": "فيروس جذر: ظهور برنامج ثانٍ لم يقصده المستخدم يعني أنه مختبئ ويمنح وصولاً بعيداً.",
+        "en": "A rootkit: a second program the user did not intend means it is hidden and grants remote access."
       }
     ],
     "correct": "troj",
@@ -649,8 +649,8 @@ const QUESTIONS = [
       "en": "Licensed, updated software is a lower risk than software from an unknown source."
     },
     "miss": {
-      "ar": "اسم «تحديث» لا يثبت أن البرنامج متنقل، ولا أن الناشر الحقيقي أرسله.",
-      "en": "The word “update” does not prove the program is a worm, or that the real vendor sent it."
+      "ar": "الكتاب يميّز حصان طروادة بأنه يبدو شرعياً ويخفي الضار، كهذه «النسخة المجانية». لا يوجد هنا نسخ عبر الأجهزة، ولا دليل على تحكم بعيد.",
+      "en": "The textbook distinguishes a Trojan as something that looks legitimate and hides the harmful part, as with this “free copy”. Nothing here copies itself across computers, and there is no evidence of remote control."
     }
   },
   {
@@ -672,13 +672,13 @@ const QUESTIONS = [
       },
       {
         "key": "ad",
-        "ar": "برنامج دعائي، لأن التحكم البعيد يظهر للمستخدم كإعلان.",
-        "en": "Adware, because remote control appears to the user as an advert."
+        "ar": "برنامج تجسس يسجل المفاتيح: التحكم من بُعد يُستخدم لقراءة ما يكتبه الموظف.",
+        "en": "Spyware that records keys: remote control is used to read what the employee types."
       },
       {
         "key": "rdp",
-        "ar": "أداة الدعم الرسمية، لأن الوصول البعيد دائماً عمل مشروع لقسم الدعم.",
-        "en": "The official support tool, because remote access is always legitimate support work."
+        "ar": "حصان طروادة: الوصول من بُعد لا يحدث إلا إذا ثبّت الموظف ملفاً بدا له شرعياً.",
+        "en": "A Trojan: remote access happens only when the employee installs a file that looked legitimate."
       }
     ],
     "correct": "root",
@@ -691,8 +691,8 @@ const QUESTIONS = [
       "en": "The computer becomes an entry point into the network while the user stays unaware."
     },
     "miss": {
-      "ar": "البرامج الدعائية ظاهرة ومزعجة عادة. والوصول البعيد المشروع يكون معلوماً وبصلاحية، لا برنامجاً مختبئاً.",
-      "en": "Adware is usually visible and annoying. Legitimate remote access is known and authorised, not a hidden program."
+      "ar": "الحالة لا تذكر تسجيل المفاتيح ولا ملفاً متنكراً. الكتاب يربط الاختباء مع السماح بالوصول من بُعد بفيروس الجذر.",
+      "en": "The case does not mention recording keys or a disguised file. The textbook links hiding plus remote access to a rootkit."
     }
   },
   {
@@ -714,13 +714,13 @@ const QUESTIONS = [
       },
       {
         "key": "worm",
-        "ar": "فيروس متنقل فقط، لأن أجهزة كثيرة مشاركة.",
-        "en": "A worm only, because many computers are involved."
+        "ar": "قطع خدمة من مصدر واحد: توقف الموقع هو نفسه سواء جاء الضغط من جهاز قوي أو من أجهزة كثيرة.",
+        "en": "Denial of service from one source: the outage is the same whether the load comes from one powerful computer or from many."
       },
       {
         "key": "sql",
-        "ar": "حقن لغة استعلام، لأن الموقع توقف عن العمل.",
-        "en": "Structured Query Language injection, because the website stopped working."
+        "ar": "فيروس متنقل أصاب خادم المتجر: الأجهزة كانت مصابة والموقع توقف، فالخادم التقط العدوى.",
+        "en": "A worm that infected the shop server: the computers were infected and the site stopped, so the server caught the infection."
       }
     ],
     "correct": "ddos",
@@ -733,8 +733,8 @@ const QUESTIONS = [
       "en": "A shop that depends on its website loses sales for the whole outage."
     },
     "miss": {
-      "ar": "المتنقل ينسخ نفسه، وهذا وحده لا يغرق الخادم. وحقن الاستعلام يغيّر أمر قاعدة البيانات ولا يحتاج آلاف الأجهزة.",
-      "en": "A worm copies itself; that alone does not flood a server. Query injection changes a database command and does not need thousands of computers."
+      "ar": "الاسم «موزع» لأن الطلبات أتت معاً من أجهزة كثيرة مصابة، أي شبكة روبوتات، لا من مصدر واحد. المتنقل ينسخ نفسه، بينما الهدف هنا إغراق الخادم لا إصابته.",
+      "en": "It is called distributed because the requests came at once from many infected computers, a botnet, not from one source. A worm copies itself, whereas the aim here is to flood the server, not to infect it."
     }
   },
   {
@@ -756,13 +756,13 @@ const QUESTIONS = [
       },
       {
         "key": "sql",
-        "ar": "حقن لغة استعلام، لأن الضحية كتبت في مربع.",
-        "en": "Structured Query Language injection, because the victim typed into a box."
+        "ar": "هندسة اجتماعية بالهاتف: الصفحة مجرد شكل، والسرقة تتم عندما يتصل المجرم ويطلب الكلمة.",
+        "en": "Social engineering by phone: the page is only a prop, and the theft happens when the criminal calls and asks for the password."
       },
       {
         "key": "bank",
-        "ar": "خطوة حماية حقيقية من البنك عبر صفحة شبيهة.",
-        "en": "A real bank protection step, using a lookalike page."
+        "ar": "برمجة نصية عبر المواقع: موقع البنك الحقيقي حُقن بنص سرق كلمة المرور داخل المتصفح.",
+        "en": "Cross-site scripting: the bank’s real site was injected with script that stole the password inside the browser."
       }
     ],
     "correct": "ph",
@@ -775,8 +775,8 @@ const QUESTIONS = [
       "en": "The criminal uses the details on the real site and may steal money."
     },
     "miss": {
-      "ar": "الكتابة في مربع لا تعني تغيير أمر قاعدة البيانات. والبنك لا يطلب كلمة المرور عبر نسخة مقلدة من صفحته.",
-      "en": "Typing in a box does not mean a database command was changed. A bank does not ask for a password through a copy of its page."
+      "ar": "الحالة رابط في رسالة يفتح صفحة مقلدة تجمع كلمة المرور، وهذا تصيد. ليست مكالمة، وليست حقناً في موقع البنك الحقيقي.",
+      "en": "The case is a link in a message that opens a copied page and collects the password, which is phishing. It is not a phone call, and it is not an injection into the bank’s real site."
     }
   },
   {
@@ -798,13 +798,13 @@ const QUESTIONS = [
       },
       {
         "key": "2fa",
-        "ar": "تسجيل في التحقق بخطوتين، لأن الدعم يحتاج كلمة المرور.",
-        "en": "Enrolment in two-step verification, because support needs the password."
+        "ar": "تصيد احتيالي: الطلب لا يتغير إذا جاء في مكالمة بدل رابط، فالاثنان صفحة مزيفة بصورة أخرى.",
+        "en": "Phishing: the request is the same if it comes in a call instead of a link, so both are a fake page in another form."
       },
       {
         "key": "ker",
-        "ar": "طلب تذكرة كيربيروس، لأن كلمة المرور جزء من المصادقة.",
-        "en": "A Kerberos ticket request, because a password is part of authentication."
+        "ar": "تهديد داخلي من الدعم الحقيقي: الموظف استخدم صلاحية الدعم لأخذ كلمة المرور.",
+        "en": "An internal threat from real support: a staff member used a support role to take the password."
       }
     ],
     "correct": "soc",
@@ -817,8 +817,8 @@ const QUESTIONS = [
       "en": "A firewall alone will not stop it, so training matters, and passwords must not be given out by phone."
     },
     "miss": {
-      "ar": "الدعم الحقيقي لا يطلب كلمة المرور ليضيف عاملاً ثانياً. وكيربيروس بروتوكول يشفر كلمة المرور على الشبكة، لا مكالمة هاتفية.",
-      "en": "Real support does not ask for a password in order to add a second factor. Kerberos is a protocol that encrypts the password on the network; it is not a phone call."
+      "ar": "مثال الكتاب هو متصل يدّعي أنه الدعم ويطلب كلمة المرور، والناس تصدّقه. ليست صفحة مزيفة، ولا إساءة من موظف دعم يملك الصلاحية فعلاً.",
+      "en": "The textbook’s example is a caller who claims to be support and asks for a password, and people believe him. It is not a fake page, and it is not abuse by a support employee who really has the authority."
     }
   },
   {
@@ -840,13 +840,13 @@ const QUESTIONS = [
       },
       {
         "key": "rep",
-        "ar": "خسارة سمعة فقط، والتوقف والغرامة ليسا أثراً أمنياً.",
-        "en": "Reputation only; downtime and fines are not security impacts."
+        "ar": "أثر مالي فقط: الغرامة وتوقف البيع يُحسبان مالاً، والسمعة والواجب القانوني نتيجة لاحقة لا تُدرج في الأثر.",
+        "en": "A financial impact only: the fine and lost sales count as money, while reputation and the legal duty are later results and are not part of the impact."
       },
       {
         "key": "ip",
-        "ar": "خسارة ملكية فكرية فقط، لأن سجلات العملاء سر تجاري لا بيانات أشخاص.",
-        "en": "Intellectual-property loss only, because customer records are a trade secret, not data about people."
+        "ar": "أثر تشغيلي فقط: يومان بلا موقع هما الضرر، وتسريب بيانات الأحياء لا يضيف واجباً قانونياً مستقلاً.",
+        "en": "An operational impact only: two days without the site is the harm, and leaking living customers’ data adds no separate legal duty."
       }
     ],
     "correct": "all",
@@ -859,8 +859,8 @@ const QUESTIONS = [
       "en": "The financial effect may be direct or indirect, such as lost sales during the outage."
     },
     "miss": {
-      "ar": "حصر الأثر في السمعة يتجاهل التوقف والغرامة. وسجلات العملاء الأحياء بيانات شخصية حتى لو كانت ذات قيمة تجارية.",
-      "en": "Limiting the impact to reputation ignores downtime and fines. Records of living customers are personal data even when they also have commercial value."
+      "ar": "الكتاب يفرّق الخسارة التشغيلية والمالية، ومنها الغرامة والتعويض، وخسارة السمعة. سجلات العملاء الأحياء تُبقي واجب حمايتها، فلا يُختصر الأثر في بند واحد.",
+      "en": "The textbook separates operational loss, financial loss including fines and compensation, and reputational loss. Records of living customers still carry a duty to protect them, so the impact is not one item only."
     }
   },
   {
@@ -882,13 +882,13 @@ const QUESTIONS = [
       },
       {
         "key": "op",
-        "ar": "خسارة تشغيلية فقط، لأن الملفات مجرد خدمة توقفت.",
-        "en": "Operational loss only, because the files are just a service that stopped."
+        "ar": "خسارة سمعة: استخدام المنافس للتصميم يضر باسم الشركة في السوق، لا بميزتها المعرفية.",
+        "en": "Reputational loss: the rival’s use of the design harms the company’s name in the market, not its knowledge advantage."
       },
       {
         "key": "ad",
-        "ar": "إصابة ببرنامج دعائي، لأن المنافس «رأى» المنتج.",
-        "en": "An adware infection, because the rival “saw” the product."
+        "ar": "خسارة بيانات شخصية: قائمة الأسعار تخص زبائن أحياء، فتدخل تحت اللائحة لا تحت الملكية الفكرية.",
+        "en": "Personal-data loss: the price list belongs to living customers, so it falls under the regulation, not under intellectual property."
       }
     ],
     "correct": "ip",
@@ -901,8 +901,8 @@ const QUESTIONS = [
       "en": "The rival may reach the market first or undercut the price with inside knowledge."
     },
     "miss": {
-      "ar": "التشغيل يتعلق بتوقف النظام لا بسرقة السر. والبرنامج الدعائي لا يسرق ملفات التصميم.",
-      "en": "Operations are about the system stopping, not about the secret being stolen. Adware does not steal design files."
+      "ar": "التصميم والسعر السري في الكتاب مثالان على ملكية فكرية في التجسس التجاري. ليست توقفاً للخدمة ولا سجلات أشخاص.",
+      "en": "A design and a secret price list are the textbook’s examples of intellectual-property loss in commercial spying. They are not a stopped service and they are not records of people."
     }
   },
   {
@@ -924,13 +924,13 @@ const QUESTIONS = [
       },
       {
         "key": "own",
-        "ar": "عمل مباح لأن الشركة تملك الخادم الذي عليه البيانات.",
-        "en": "Lawful, because the company owns the server that holds the data."
+        "ar": "مخالفة قانون إساءة استخدام الحاسوب: تغيير الغرض يعني أن الشركة وصلت إلى البيانات بلا صلاحية.",
+        "en": "A Computer Misuse Act offence: changing the purpose means the company accessed the data without authority."
       },
       {
         "key": "cma",
-        "ar": "مسألة قانون إساءة استخدام الحاسوب فقط، لا حماية بيانات.",
-        "en": "A Computer Misuse Act matter only, not data protection."
+        "ar": "معالجة مشروعة: ما دامت البيانات جُمعت بموافقة، فيجوز تغيير الغرض وإبقاؤها بلا حد زمني.",
+        "en": "Lawful processing: once the data was collected with consent, the purpose may be changed and the data kept with no time limit."
       }
     ],
     "correct": "gdpr",
@@ -943,8 +943,8 @@ const QUESTIONS = [
       "en": "The person has rights that include being informed, access, erasure, and objecting to marketing."
     },
     "miss": {
-      "ar": "ملكية الخادم لا تلغي الواجب. وقانون إساءة استخدام الحاسوب يجرم الوصول غير المصرح به، بينما هذه المخالفة في طريقة الشركة نفسها في معالجة البيانات.",
-      "en": "Owning the server does not cancel the duty. The Computer Misuse Act criminalises unauthorised access, while this failure is in how the company itself handles the data."
+      "ar": "اللائحة تقيّد الغرض المحدد والمدة اللازمة والأمان حتى بعد جمع مشروع. قانون إساءة استخدام الحاسوب يخص الوصول غير المصرح به، لا طريقة الشركة في معالجة ما تجمعه هي.",
+      "en": "The regulation limits the purpose, the retention period, and security even after lawful collection. The Computer Misuse Act concerns unauthorised access, not the way the company handles data it collected itself."
     }
   },
   {
@@ -966,13 +966,13 @@ const QUESTIONS = [
       },
       {
         "key": "ok",
-        "ar": "فعل مباح إذا لم ينشر البيانات ولم يسرق مالاً.",
-        "en": "Lawful if the person did not publish the data and did not steal money."
+        "ar": "مخالفة اللائحة العامة فقط: التعديل مسألة حماية بيانات، والوصول نفسه بلا وصف جنائي.",
+        "en": "A General Data Protection Regulation matter only: the change is a data-protection issue, and the access itself has no criminal description."
       },
       {
         "key": "pol",
-        "ar": "مخالفة سياسة كلمة المرور فقط، بلا وصف جنائي.",
-        "en": "Only a breach of the password policy, with no criminal description."
+        "ar": "فعل بلا جريمة إذا كانت الثغرة منشورة ولم تُغلق: المسؤولية على من ترك النظام، لا على من دخل.",
+        "en": "No offence if the flaw was published and left unpatched: the duty sits with whoever left the system open, not with the person who entered."
       }
     ],
     "correct": "cma",
@@ -985,8 +985,8 @@ const QUESTIONS = [
       "en": "The person may face a criminal case, and the company may still have failed its duty to protect the data."
     },
     "miss": {
-      "ar": "النشر أو سرقة المال ليسا شرطاً ليصبح الوصول نفسه غير مشروع. وسياسة كلمة المرور إجراء داخلي لا يلغي الجريمة.",
-      "en": "Publication or theft of money is not required before the access itself is unlawful. A password policy is an internal control; it does not remove the offence."
+      "ar": "الدخول من خارج الشركة بلا صلاحية ثم تعديل السجلات يجمع وصولاً وتعديلاً غير مصرح بهما في قانون إساءة استخدام الحاسوب. ترك ثغرة لا يبيح الدخول، واللائحة لا تلغي هذا الوصف.",
+      "en": "Entering from outside without authority and then changing records is unauthorised access plus unauthorised modification under the Computer Misuse Act. Leaving a flaw unpatched does not permit the entry, and the regulation does not remove that description."
     }
   },
   {
@@ -1008,13 +1008,13 @@ const QUESTIONS = [
       },
       {
         "key": "never",
-        "ar": "ممنوع دائماً، حتى على شبكة الشركة الخاصة.",
-        "en": "Always forbidden, even on the company’s own network."
+        "ar": "يجوز من دون إبلاغ: الشبكة ملك الشركة، وذكر المراقبة في العقد إجراء شكلي لا شرط.",
+        "en": "Allowed without telling staff: the network belongs to the company, and a contract clause is a formality, not a condition."
       },
       {
         "key": "home",
-        "ar": "مسموح أيضاً على بريد الموظف في منزله عبر مزود الإنترنت الخاص به.",
-        "en": "Also allowed on the employee’s home email over their own internet provider."
+        "ar": "يلزم أمر محكمة لكل مراجعة، حتى لو نُصّ على المراقبة في عقد العمل وعلى شبكة الشركة.",
+        "en": "A court order is required for every review, even when the contract mentions monitoring and the network is the company’s."
       }
     ],
     "correct": "law",
@@ -1027,8 +1027,8 @@ const QUESTIONS = [
       "en": "Undisclosed monitoring breaks the duty to inform staff that the textbook states."
     },
     "miss": {
-      "ar": "الكتاب لا يجعل الاعتراض ممنوعاً على شبكة الشركة، ولا يمدّه إلى اتصال الموظف الخاص في البيت.",
-      "en": "The textbook does not ban interception on the company network, and it does not extend it to the employee’s private connection at home."
+      "ar": "اعتراض بريد الموظفين على شبكة الشركة يمكن أن يكون مشروعاً إذا أُبلغوا، غالباً في العقد. ملكية الشبكة لا تلغي الإبلاغ، ولا يُشترط أمر محكمة لكل رسالة.",
+      "en": "Reviewing staff email on the company network can be lawful if staff are told, usually in the contract. Owning the network does not remove the need to tell them, and a court order is not required for every message."
     }
   },
   {
@@ -1050,13 +1050,13 @@ const QUESTIONS = [
       },
       {
         "key": "ok",
-        "ar": "وضع سليم، لأن «الجميع» تعني الموظفين الداخلين فقط.",
-        "en": "A sound setup, because Everyone means only people who have signed in."
+        "ar": "وضع مقبول إذا كانت كلمة مرور المجلد قوية: المجموعة «الجميع» لا تُفتح من دون تلك الكلمة.",
+        "en": "Acceptable if the folder password is strong: the Everyone group cannot be opened without that password."
       },
       {
         "key": "wifi",
-        "ar": "ثغرة تُغلق بإخفاء اسم الشبكة اللاسلكية.",
-        "en": "A vulnerability closed by hiding the wireless network name."
+        "ar": "ثغرة يوم صفر في نظام المجلدات: التحكم الكامل يعني أن نظام التشغيل لم يصله إصلاح بعد.",
+        "en": "A zero-day flaw in the folder system: full control means the operating system has not received a fix yet."
       }
     ],
     "correct": "perm",
@@ -1069,8 +1069,8 @@ const QUESTIONS = [
       "en": "One compromised account can read and change payroll."
     },
     "miss": {
-      "ar": "مجموعة الجميع أوسع من الموظفين المصرح لهم بالرواتب. وإخفاء اسم الشبكة لا يغير أذونات المجلد.",
-      "en": "The Everyone group is wider than the staff authorised for payroll. Hiding the network name does not change folder permissions."
+      "ar": "المجموعة «الجميع» تمنح التحكم لكل حساب يصل إلى المجلد، وهذا خلل أذونات. قوة كلمة المرور لا تعطّل المجموعة، والتحكم الكامل ليس ثغرة بلا تحديث.",
+      "en": "The Everyone group gives control to every account that can reach the folder, which is a permissions flaw. A strong password does not disable that group, and full control is not an unpatched flaw."
     }
   },
   {
@@ -1092,13 +1092,13 @@ const QUESTIONS = [
       },
       {
         "key": "least",
-        "ar": "تطبيق سليم لأقل صلاحية، لأن الموظف يحتاج هذه الأدوات.",
-        "en": "A correct least-privilege setup, because staff need these tools."
+        "ar": "السياسة مقبولة: خمسة أحرف تكفي إذا مُنع التثبيت، لأن الخطر في البرامج لا في طول الكلمة.",
+        "en": "The policy is acceptable: five characters are enough if installation is blocked, because the risk is the software, not the length."
       },
       {
         "key": "zero",
-        "ar": "ثغرة يوم صفر في نظام حُدّث بالكامل.",
-        "en": "A zero-day flaw in a fully updated system."
+        "ar": "ثغرة في جدار الحماية: فتح مشغّل الأوامر يعني أن منفذاً سُمح به من الإنترنت.",
+        "en": "A firewall flaw: being able to open the command prompt means a port was allowed in from the internet."
       }
     ],
     "correct": "org",
@@ -1111,8 +1111,8 @@ const QUESTIONS = [
       "en": "A compromised account can install harmful software, and a short password is easy to guess."
     },
     "miss": {
-      "ar": "أقل صلاحية تعني المنع لا الإطلاق. ويوم الصفر فجوة تحديث برمجي، لا إعداد إداري خاطئ.",
-      "en": "Least privilege means restricting people, not leaving the tools open. A zero-day is a software-update gap, not a bad administrative setting."
+      "ar": "المشكلة داخل الحساب: صلاحيات أوسع مما يلزم، وكلمة قصيرة لا تُغيَّر. هذا ليس منفذاً مفتوحاً من الإنترنت، ومنع التثبيت لا يصلح كلمة قصيرة تبقى سنين.",
+      "en": "The problem is inside the account: more privilege than needed, and a short password that is never changed. This is not a port open from the internet, and blocking installation does not fix a short password left for years."
     }
   },
   {
@@ -1134,13 +1134,13 @@ const QUESTIONS = [
       },
       {
         "key": "xss",
-        "ar": "برمجة نصية عبر المواقع: الحقن يسرق ملفات الارتباط في المتصفح.",
-        "en": "Cross-site scripting: the injection steals cookies in the browser."
+        "ar": "برمجة نصية عبر المواقع: ظهور جدول العملاء يعني أن النص اشتغل في المتصفح وسرق الجلسة.",
+        "en": "Cross-site scripting: showing the customer table means the text ran in the browser and stole the session."
       },
       {
         "key": "ddos",
-        "ar": "قطع خدمة موزع: مربع البحث أغرق الخادم بالطلبات.",
-        "en": "A distributed denial of service: the search box flooded the server with requests."
+        "ar": "خلل أذونات لا حقن: الاستعلام نجح لأن حساب القاعدة يملك قراءة الجدول، والنص لم يغيّر الأمر.",
+        "en": "A permissions flaw, not injection: the query worked because the database account can read the table, and the text did not change the command."
       }
     ],
     "correct": "sql",
@@ -1153,8 +1153,8 @@ const QUESTIONS = [
       "en": "The defence is: do not glue the text straight into the command, check the input, and give the database account least privilege."
     },
     "miss": {
-      "ar": "البرمجة عبر المواقع تهاجم المتصفح لا جدول القاعدة. وقطع الخدمة يعتمد على حجم الطلبات لا على جملة واحدة.",
-      "en": "Cross-site scripting attacks the browser, not the database table. Denial of service depends on the volume of requests, not on one statement."
+      "ar": "النص أنهى جملة البحث وصار جزءاً من أمر القاعدة، وهذا حقن لغة الاستعلام المهيكلة. البرمجة عبر المواقع تضرب المتصفح، وكون الحساب يستطيع القراءة لا يبرر أن يغيّر الزائر شكل الأمر.",
+      "en": "The text ended the search sentence and became part of the database command, which is Structured Query Language injection. Cross-site scripting hits the browser, and the account’s right to read does not excuse a visitor changing the shape of the command."
     }
   },
   {
@@ -1176,13 +1176,13 @@ const QUESTIONS = [
       },
       {
         "key": "sql",
-        "ar": "حقن لغة استعلام، لأن الكلمة المستعملة هي «حقن».",
-        "en": "Structured Query Language injection, because the word used is “injection”."
+        "ar": "حقن لغة استعلام: الرسالة المنبثقة دليل على أن أمر القاعدة تغيّر وأعاد ناتجاً إلى الصفحة.",
+        "en": "Structured Query Language injection: the popup proves the database command changed and returned a result to the page."
       },
       {
         "key": "fw",
-        "ar": "تصفية حزم تعمل كما يجب، لأن المتصفح أظهر رسالة.",
-        "en": "Packet filtering working as intended, because the browser showed a message."
+        "ar": "تصيد احتيالي: الصفحة التي ظهر فيها النص نسخة من الموقع، وجمعت ملف ارتباط الجلسة.",
+        "en": "Phishing: the page where the text appeared is a copy of the site, and it collected the session cookie."
       }
     ],
     "correct": "xss",
@@ -1195,8 +1195,8 @@ const QUESTIONS = [
       "en": "The theft here is the visitor’s session in the browser, not necessarily a table on the server."
     },
     "miss": {
-      "ar": "اشتراك كلمة الحقن لا يجعل الهجوم على قاعدة البيانات. وتصفية الحزم لا تنشئ رسالة في صفحة الموقع.",
-      "en": "Sharing the word “injection” does not make this an attack on the database. Packet filtering does not create a message in the website page."
+      "ar": "النص اشتغل داخل صفحة الموقع في المتصفح وسرّب ملف الجلسة، وهذه برمجة نصية عبر المواقع. حقن الاستعلام يغيّر أمر القاعدة، والتصيد يعتمد على صفحة مقلدة لا على حقن في الصفحة الحقيقية.",
+      "en": "The text ran in the site’s page inside the browser and leaked the session cookie, which is cross-site scripting. Query injection changes a database command, and phishing depends on a copied page, not on an injection into the real page."
     }
   },
   {
@@ -1218,13 +1218,13 @@ const QUESTIONS = [
       },
       {
         "key": "safe",
-        "ar": "الأنظمة القديمة أأمن لأن المهاجمين يستهدفون الجديد فقط.",
-        "en": "Older systems are safer because attackers target only what is new."
+        "ar": "الخطر مؤجل: ما دام الإصلاح لم يصدر، فلا هجوم ممكناً إلى أن تنشره الشركة.",
+        "en": "The risk waits: until a fix is published, no attack is possible."
       },
       {
         "key": "usb",
-        "ar": "المشكلة تقتصر على ذواكر الناقل التسلسلي العالمي.",
-        "en": "The problem is limited to Universal Serial Bus storage sticks."
+        "ar": "عزل الأجهزة القديمة يغلق يوم الصفر: الثغرة تخص الأنظمة التي ما زالت تصلها تحديثات فقط.",
+        "en": "Isolating old computers closes the zero-day window: the flaw applies only to systems that still receive updates."
       }
     ],
     "correct": "zero",
@@ -1237,8 +1237,8 @@ const QUESTIONS = [
       "en": "In a setting such as a hospital, the stoppage becomes a wide operational impact."
     },
     "miss": {
-      "ar": "قدم النظام يزيد الخطر ولا ينقصه. وذاكرة الناقل مسار مختلف لإدخال برنامج ضار.",
-      "en": "Age of the system increases the risk; it does not reduce it. Universal Serial Bus storage is a different path for introducing harmful software."
+      "ar": "يوم الصفر هو المدة بين اكتشاف الثغرة وإصلاحها، وفيها يمكن الاستغلال. النظام الذي لم يعد مدعوماً قد لا يصله إصلاح. العزل إجراء مساعد لا يلغي أن النافذة مفتوحة.",
+      "en": "The zero-day window is the time between discovery and a fix, and the flaw can be used during it. An unsupported system may never receive a fix. Isolation helps, but it does not mean the window is closed."
     }
   },
   {
@@ -1260,13 +1260,13 @@ const QUESTIONS = [
       },
       {
         "key": "ntfs",
-        "ar": "أذونات الملفات تكفي بعد نقل القرص إلى جهاز آخر.",
-        "en": "File permissions are still enough after the disk is moved to another computer."
+        "ar": "أذونات القرص تكفي بعد السرقة: القرص يرفض القراءة على أي جهاز آخر لأن الأذونات مخزّنة عليه.",
+        "en": "The disk’s permissions are enough after the theft: the disk refuses to be read on any other computer because the permissions are stored on it."
       },
       {
         "key": "nat",
-        "ar": "ترجمة عنوان الشبكة على جدار الحماية تحمي القرص في يد السارق.",
-        "en": "Network address translation on the firewall protects the disk in the thief’s hands."
+        "ar": "قفل المكتب يكفي وحده: التشفير يحمي القرص أثناء مروره على الشبكة، لا عندما يُنتزع الجهاز.",
+        "en": "Locking the office is enough on its own: encryption protects the disk while it travels on the network, not when the computer is taken."
       }
     ],
     "correct": "bit",
@@ -1279,8 +1279,8 @@ const QUESTIONS = [
       "en": "Encryption without locking the room leaves the device easy to steal, and a lock without encryption leaves the disk readable."
     },
     "miss": {
-      "ar": "الأذونات تعمل والنظام شغال. وترجمة العناوين تخفي عناوين الشبكة ولا تشفر قرصاً مفصولاً.",
-      "en": "Permissions apply while the system is running. Address translation hides network addresses; it does not encrypt a removed disk."
+      "ar": "قراءة القرص على جهاز آخر تتجاوز أذونات النظام الأصلي، وهذا هجوم غير متصل. يلزم تشفير القرص بالكامل مع قفل المكتب. التشفير هنا يحمي الملفات في يد السارق، لا المرور على الشبكة.",
+      "en": "Reading the disk on another computer bypasses the original system’s permissions, which is an offline attack. Full-disk encryption and a locked office are both needed. Encryption here protects the files in the thief’s hands, not traffic on the network."
     }
   },
   {
@@ -1302,13 +1302,13 @@ const QUESTIONS = [
       },
       {
         "key": "sig",
-        "ar": "التواقيع تكشف كل فيروس جديد فوراً، فلا حاجة إلى تحديث ولا إلى موجّهات.",
-        "en": "Signatures detect every new virus immediately, so no update and no heuristics are needed."
+        "ar": "التوقيع المحدَّث يكفي: كل ملف بلا توقيع يُحذف فوراً، والعزل يؤخّر التنظيف بلا فائدة.",
+        "en": "An updated signature is enough: every file with no signature is deleted at once, and quarantine only delays the cleanup."
       },
       {
         "key": "run",
-        "ar": "يُترك الملف يعمل ليُلاحظ أثره، لأن العزل يخفي الدليل.",
-        "en": "Leave the file running so its effect can be watched, because quarantine hides the evidence."
+        "ar": "يُشغَّل داخل الشبكة مع مراقبة، لأن العزل يمنع رؤية ما يفعله الملف فعلاً.",
+        "en": "It should be run on the network under watch, because quarantine stops anyone seeing what the file actually does."
       }
     ],
     "correct": "heu",
@@ -1321,8 +1321,8 @@ const QUESTIONS = [
       "en": "Old signatures let a new virus through. Leaving the file running gives the infection time."
     },
     "miss": {
-      "ar": "التواقيع لا تعرف ما لم يُضف بعد إلى القائمة. والعزل لا يمحو الدليل؛ هو يقيّد الملف إلى حين الفحص.",
-      "en": "Signatures do not know what has not yet been added to the list. Quarantine does not destroy evidence; it contains the file until it is examined."
+      "ar": "الملف لا يطابق توقيعاً معروفاً وفيه أوامر لا تظهر في البرامج السليمة، فتكشفه الموجّهات ويُعزل بلا حذف فوري. تحديث التواقيع لا يجعلها ترى ما لم يُعرَّف بعد، وتشغيله على شبكة العمل قد ينشره.",
+      "en": "The file matches no known signature and contains commands that do not appear in healthy software, so heuristics detect it and quarantine stops it without deleting it at once. Updating signatures does not make them see something not yet defined, and running it on the work network may spread it."
     }
   },
   {
@@ -1344,13 +1344,13 @@ const QUESTIONS = [
       },
       {
         "key": "pkt",
-        "ar": "تصفية الحزم وحدها تفهم التطبيق وتخفي كل عنوان داخلي.",
-        "en": "Packet filtering alone understands the application and hides every internal address."
+        "ar": "تصفية الحزم ترى التطبيق من رقمه وترفضه، وتبديل المنفذ يخفي العنوان الداخلي بلا ترجمة.",
+        "en": "Packet filtering sees the application from its number and blocks it, and changing the port hides the internal address with no translation."
       },
       {
         "key": "wpa",
-        "ar": "تشفير الوصول المحمي عبر واي فاي 2 على نقطة الوصول يؤدي المهمتين.",
-        "en": "Wi-Fi Protected Access 2 encryption on the access point does both jobs."
+        "ar": "إخفاء اسم الشبكة اللاسلكية يمنع التطبيق القادم من الإنترنت ويخفي عناوين الأجهزة الداخلية.",
+        "en": "Hiding the wireless name blocks an application coming from the internet and hides the internal addresses."
       }
     ],
     "correct": "nat",
@@ -1363,8 +1363,8 @@ const QUESTIONS = [
       "en": "Without hiding, an outsider can map the devices. Without an application rule, the remote terminal may pass."
     },
     "miss": {
-      "ar": "تصفية الحزم لا تفهم التطبيق ولا تخفي العناوين. وتشفير الشبكة اللاسلكية لا يرشح تطبيقاً على حدود الإنترنت.",
-      "en": "Packet filtering does not understand the application and does not hide addresses. Wireless encryption does not filter an application at the internet boundary."
+      "ar": "تصفية الحزم لا تفهم التطبيق ولا تخفي عنواناً مثل 192.168.1.20. إخفاء الاسم اللاسلكي لا يوقف تطبيقاً من الإنترنت. المطلوب قاعدة على طبقة التطبيقات مع ترجمة عنوان الشبكة.",
+      "en": "Packet filtering does not understand the application and does not hide an address such as 192.168.1.20. Hiding the wireless name does not stop an application from the internet. The case needs an application-layer rule plus network address translation."
     }
   },
   {
@@ -1386,13 +1386,13 @@ const QUESTIONS = [
       },
       {
         "key": "week",
-        "ar": "تطويل الكلمة وتغييرها كل أسبوع يكفي، والورقة آمنة داخل المكتب.",
-        "en": "A longer password changed every week is enough, and a note is safe inside the office."
+        "ar": "إطالة الكلمة ومنع الورق يكفيان: البصمة أقوى لأنها لا تُنسى ولا تُسرق كما تُسرق ورقة.",
+        "en": "A longer password and a ban on paper are enough: a fingerprint is stronger because it cannot be forgotten or stolen like paper."
       },
       {
         "key": "reset",
-        "ar": "البصمة المسروقة تُستبدل باختيار بصمة جديدة كما تُستبدل الكلمة.",
-        "en": "A stolen fingerprint is replaced by choosing a new fingerprint, just like a password."
+        "ar": "إذا سُرق قالب البصمة تُسجَّل إصبع أخرى، فيصبح الاستبدال كاستبدال كلمة المرور.",
+        "en": "If the fingerprint template is stolen, another finger is enrolled, so replacement works like replacing a password."
       }
     ],
     "correct": "two",
@@ -1405,8 +1405,8 @@ const QUESTIONS = [
       "en": "A note on the screen is a user vulnerability that a colleague or a visitor can read."
     },
     "miss": {
-      "ar": "كتابة الكلمة نتيجة معروفة للسياسة القاسية لا دليل نجاحها. والكتاب ينص على أن البصمة لا تُستبدل كما تُستبدل الكلمة.",
-      "en": "Writing the password down is a known result of a harsh policy, not proof that the policy worked. The textbook states that a biometric cannot be replaced the way a password can."
+      "ar": "سياسة لا يطيقها الموظف تدفعه لكتابة الكلمة، والتحقق بخطوتين أنسب من كلمة أطول فقط. بيانات البصمة إذا سُرقت لا تُغيَّر كما تُغيَّر كلمة المرور.",
+      "en": "A policy staff cannot live with pushes them to write the password down, and two-step verification fits better than only a longer password. Stolen fingerprint data cannot be changed the way a password can."
     }
   },
   {
@@ -1428,13 +1428,13 @@ const QUESTIONS = [
       },
       {
         "key": "wep",
-        "ar": "الإبقاء على المكافئ السلكي لأنه صُمم ليساوي أمان السلك وما زال الأقوى.",
-        "en": "Keep Wired Equivalent Privacy because it was designed to match wired security and is still the strongest."
+        "ar": "الإبقاء على المكافئ السلكي بعد نزع الملصق وتعطيل الإعداد السهل: الخوارزمية صُممت لتعادل السلك وما زالت كافية.",
+        "en": "Keep Wired Equivalent Privacy after removing the sticker and turning off easy setup: the algorithm was designed to match a cable and is still enough."
       },
       {
         "key": "mac",
-        "ar": "تصفية عنوان التحكم في الوصول إلى الوسائط مع إخفاء الاسم تكفي، فالعنوان لا يُزوَّر والاسم المخفي لا يُكتشف.",
-        "en": "Media Access Control filtering plus a hidden name is enough, because the address cannot be spoofed and a hidden name cannot be found."
+        "ar": "التصفية حسب عنوان الجهاز مع إخفاء الاسم تكفي: العنوان ثابت لا يُنسخ، والاسم المخفي لا يظهر في المسح.",
+        "en": "Filtering by device address plus hiding the name is enough: the address is fixed and cannot be copied, and a hidden name does not appear in a scan."
       }
     ],
     "correct": "wpa",
@@ -1447,8 +1447,8 @@ const QUESTIONS = [
       "en": "A sticker in the corridor gives the key to anyone passing, and the wireless broadcast can be captured in range."
     },
     "miss": {
-      "ar": "الاسم التاريخي للمكافئ السلكي لا يعني أنه الأقوى اليوم. والكتاب يقول إن إخفاء الاسم ضعيف وإن عنوان الجهاز يمكن تزويره.",
-      "en": "The historical name of Wired Equivalent Privacy does not mean it is the strongest today. The textbook says hiding the name is weak and a device address can be spoofed."
+      "ar": "المكافئ السلكي ضعيف رغم اسمه، ويُستبدل بالوصول المحمي عبر واي فاي 2 مع التشفير المتقدم، مع تعطيل إعداد الحماية السهل. تصفية العنوان تُتجاوز بنسخ العنوان، وإخفاء الاسم لا يمنع من يعرفه.",
+      "en": "Wired Equivalent Privacy is weak despite its name. It should be replaced by Wi-Fi Protected Access 2 with advanced encryption, and easy setup should be turned off. Address filtering can be bypassed by copying an address, and hiding the name does not stop someone who already knows it."
     }
   },
   {
@@ -1470,13 +1470,13 @@ const QUESTIONS = [
       },
       {
         "key": "safe",
-        "ar": "الشبكة المحلية آمنة دائماً لأنها سلكية، فلا حاجة إلى جدار حماية.",
-        "en": "A local area network is always safe because it uses cables, so no firewall is needed."
+        "ar": "ترجمة العنوان على المخرج تكفي: الشبكة المحلية خلفها لا تحتاج جدار حماية ثانياً.",
+        "en": "Translation at the exit is enough: a local network behind it does not need a second firewall."
       },
       {
         "key": "wan",
-        "ar": "الإنترنت أأمن من الشبكة المحلية لأن عدداً أكبر من الناس يراقبه.",
-        "en": "The internet is safer than the local network because more people watch it."
+        "ar": "الإنترنت أقل خطراً من شبكة المكتب لأن مزود الخدمة يفحص المرور قبل وصوله.",
+        "en": "The internet is a lower risk than the office network because the provider inspects the traffic before it arrives."
       }
     ],
     "correct": "lan",
@@ -1489,8 +1489,8 @@ const QUESTIONS = [
       "en": "The outside connection remains an entry path even when the computers are inside the building."
     },
     "miss": {
-      "ar": "السلك لا يلغي الحاجة إلى جدار الحماية. وكثرة المستخدمين على الإنترنت تزيد الخطر ولا تصنع أماناً.",
-      "en": "Cable does not remove the need for a firewall. More users on the internet increase the risk; they do not create safety."
+      "ar": "الشبكة المحلية أقل عرضة من الإنترنت، لكنها تحتاج حماية عند حد الاتصال بالخارج. ترجمة العنوان لا تغني عن تلك الحماية، والمزود لا يتحمل تأمين شبكة المكتب.",
+      "en": "The local network is less exposed than the internet, but it still needs protection at the boundary. Address translation does not replace that protection, and the provider is not responsible for securing the office network."
     }
   },
   {
@@ -1512,13 +1512,13 @@ const QUESTIONS = [
       },
       {
         "key": "door",
-        "ar": "الشبكة آمنة إذا كانت كلمة المقهى مكتوبة على الباب.",
-        "en": "The network is safe if the cafe password is written on the door."
+        "ar": "الكلمة المكتوبة على الباب تعني أن الشبكة مشفّرة، فيجوز إتمام العملية البنكية.",
+        "en": "A password written on the door means the network is encrypted, so the banking transaction is acceptable."
       },
       {
         "key": "fib",
-        "ar": "الوسيط هنا ألياف ضوئية، لذلك الاعتراض غير عملي.",
-        "en": "The medium here is fibre optic, so interception is impractical."
+        "ar": "الاعتراض غير عملي داخل المقهى: التنصت اللاسلكي يحتاج أن يكون المهاجم خارج المبنى.",
+        "en": "Interception is impractical inside the café: wireless eavesdropping needs the attacker to be outside the building."
       }
     ],
     "correct": "open",
@@ -1531,8 +1531,8 @@ const QUESTIONS = [
       "en": "Even an encrypted network is a poor place for bank secrets if the key is posted for everyone."
     },
     "miss": {
-      "ar": "كلمة على الباب معلنة لا تصنع خصوصية. وشبكة المقهى لاسلكية لا ليفية.",
-      "en": "A password on the door is public; it does not create privacy. A cafe network is wireless, not fibre."
+      "ar": "الشبكة المفتوحة تبث بلا تشفير، ولو وُضعت كلمة على الباب. القرب من الأجهزة يسهّل الاعتراض، فلا تُجرى عليها عملية بنكية.",
+      "en": "An open network broadcasts without encryption, even if a password is written on the door. Being close to the devices makes interception easier, so a banking transaction should not be done on it."
     }
   },
   {
@@ -1554,13 +1554,13 @@ const QUESTIONS = [
       },
       {
         "key": "inet",
-        "ar": "شبكة منطقة التخزين اسم آخر للإنترنت العام.",
-        "en": "A storage area network is another name for the public internet."
+        "ar": "شبكة واسعة خاصة: الصور تنتقل بين مواقع المستشفى، فالتصنيف يتبع المسافة لا وظيفة التخزين.",
+        "en": "A private wide network: the images travel between hospital sites, so the class follows the distance, not the storage role."
       },
       {
         "key": "pan",
-        "ar": "شبكة شخصية بالبلوتوث بين الهاتف والسماعة.",
-        "en": "A Bluetooth personal area network between a phone and a headset."
+        "ar": "إنترانت المستشفى: كل شبكة داخل المبنى متاحة لتصفح الموظفين، بما فيها صور الأشعة.",
+        "en": "The hospital intranet: every network inside the building is there for staff browsing, including the scan images."
       }
     ],
     "correct": "san",
@@ -1573,11 +1573,10 @@ const QUESTIONS = [
       "en": "Mixing it with a guest network or the internet exposes a very large amount of data."
     },
     "miss": {
-      "ar": "الإنترنت عام. والبلوتوث قصير المدى للأجهزة القريبة، لا لتخزين أشعة المستشفى.",
-      "en": "The internet is public. Bluetooth is short-range for nearby devices, not for a hospital’s scan storage."
+      "ar": "شبكة منطقة التخزين مخصّصة للبيانات الضخمة وسريعة ومنفصلة عن استخدام الموظفين اليومي. ليست رابطاً بين مدن، ولا تصفحاً عاماً داخل المبنى.",
+      "en": "A storage-area network is for large data, is fast, and is separate from daily staff use. It is not a link between cities, and it is not general browsing inside the building."
     }
   },
-
   {
     "id": 31,
     "lo": "B",
@@ -1597,13 +1596,13 @@ const QUESTIONS = [
       },
       {
         "key": "wan",
-        "ar": "شبكة واسعة، لأن الاتصال بلا سلك.",
-        "en": "A wide area network, because the link has no cable."
+        "ar": "شبكة محلية لاسلكية: كل اتصال بلا سلك، ولو كان قصيراً بين هاتف وسماعة، يبقى شبكة محلية.",
+        "en": "A wireless local network: every cable-free link, even a short one between a phone and a headset, is still a local network."
       },
       {
         "key": "san",
-        "ar": "شبكة منطقة تخزين، لأن الصوت يُحفظ على الهاتف.",
-        "en": "A storage area network, because the sound is kept on the phone."
+        "ar": "اتصال طرف بطرف وليس شبكة: الشبكة لا تقوم إلا إذا زاد العدد على جهازين.",
+        "en": "A point-to-point link, not a network: a network exists only when there are more than two devices."
       }
     ],
     "correct": "pan",
@@ -1616,8 +1615,8 @@ const QUESTIONS = [
       "en": "This path does not replace protection of the local network or encryption on the internet."
     },
     "miss": {
-      "ar": "غياب السلك لا يجعل المسافة واسعة. وتخزين الملف على الهاتف ليس شبكة تخزين للمؤسسة.",
-      "en": "The lack of a cable does not make the distance wide. A file on a phone is not the organisation’s storage network."
+      "ar": "المدى القصير والطاقة المنخفضة بين الهاتف والسماعة تعريف الشبكة الشخصية بالبلوتوث. غياب السلك لا يجعلها شبكة محلية، والجهازان يكفيان لتسميتها شبكة.",
+      "en": "Short range and low power between a phone and a headset define a personal-area network using Bluetooth. The lack of a cable does not make it a local network, and two devices are enough for it to be a network."
     }
   },
   {
@@ -1639,13 +1638,13 @@ const QUESTIONS = [
       },
       {
         "key": "full",
-        "ar": "منح الموردين الإنترانت كاملة لأنهم جهة معروفة.",
-        "en": "Give suppliers the full intranet because they are a known party."
+        "ar": "إنترانت كاملة مع إخفاء مجلد الموارد البشرية بالاسم: المورد جهة معروفة فلا تُفصل أنظمته.",
+        "en": "The full intranet, with the human-resources folder hidden by name: the supplier is known, so its systems are not separated."
       },
       {
         "key": "san",
-        "ar": "وضع الموردين على شبكة التخزين حتى لا يروا الملفات.",
-        "en": "Put suppliers on the storage network so they cannot see files."
+        "ar": "شبكة افتراضية خاصة بلا حد على المحتوى: التشفير بين الطرفين يغني عن تقييد ما يراه المورد.",
+        "en": "A virtual private network with no limit on content: encryption between the two sides removes the need to restrict what the supplier sees."
       }
     ],
     "correct": "ext",
@@ -1658,8 +1657,8 @@ const QUESTIONS = [
       "en": "Opening the whole intranet widens unauthorised access to staff data."
     },
     "miss": {
-      "ar": "معرفة اسم المورد لا تساوي صلاحية الموظف. وشبكة التخزين ليست أداة لمنع رؤية الملفات.",
-      "en": "Knowing the supplier’s name is not the same as a staff right. The storage network is not a tool for hiding files."
+      "ar": "الشبكة الخارجية تمنح الشريك الأنظمة المشتركة فقط، لا الإنترانت كلها. إخفاء اسم المجلد لا يمنعه، والتشفير يحمي الطريق ولا يحدد الصلاحية.",
+      "en": "An extranet gives the partner only the shared systems, not the whole intranet. Hiding a folder name does not stop access, and encryption protects the path but does not set permission."
     }
   },
   {
@@ -1681,13 +1680,13 @@ const QUESTIONS = [
       },
       {
         "key": "wan",
-        "ar": "الإنترنت بين الفرعين خاص أصلاً، فلا حاجة إلى تشفير.",
-        "en": "The internet between the branches is already private, so encryption is unnecessary."
+        "ar": "الرابط خاص بطبيعته: ما دام يصل فرعين للشركة نفسها، فمروره على الإنترنت العام لا يحتاج تشفيراً إضافياً.",
+        "en": "The link is private by nature: because it joins two branches of the same company, travel over the public internet needs no extra encryption."
       },
       {
         "key": "ssid",
-        "ar": "إخفاء اسم الشبكة في كل فرع يحمي البيانات أثناء عبور الإنترنت.",
-        "en": "Hiding the network name in each branch protects the data while it crosses the internet."
+        "ar": "جدار حماية في كل فرع يكفي: التشفير بين المدينتين يلزم فقط إذا كانت الشبكة لاسلكية.",
+        "en": "A firewall in each branch is enough: encryption between the two cities is needed only if the network is wireless."
       }
     ],
     "correct": "vpn",
@@ -1700,8 +1699,8 @@ const QUESTIONS = [
       "en": "Without encryption, prices or customer data can be intercepted between the branches."
     },
     "miss": {
-      "ar": "الإنترنت عام لا خاص. وإخفاء اسم الشبكة اللاسلكية لا يشفر المرور بين مدينتين.",
-      "en": "The internet is public, not private. Hiding a wireless name does not encrypt traffic between two cities."
+      "ar": "الإنترنت بين الفرعين عام. الشبكة الافتراضية الخاصة تصنع فوقه مساراً مشفّراً. جدار كل فرع لا يشفّر الطريق بينهما، واللاسلكي ليس شرط التشفير.",
+      "en": "The internet between the branches is public. A virtual private network builds an encrypted path over it. Each branch’s firewall does not encrypt the road between them, and wireless is not the condition for encryption."
     }
   },
   {
@@ -1723,13 +1722,13 @@ const QUESTIONS = [
       },
       {
         "key": "p2p",
-        "ar": "النظير إلى النظير أنسب عند النمو، لأن لا خادم مركزياً يُهاجَم.",
-        "en": "Peer-to-peer is a better fit as the organisation grows, because there is no central server to attack."
+        "ar": "النظير إلى النظير أنسب عند ثمانين مستخدماً: كل جهاز يحتفظ بالحساب، فلا توجد نقطة مركزية تُهاجَم.",
+        "en": "Peer-to-peer fits better at eighty users: each computer keeps the account, so there is no central point to attack."
       },
       {
         "key": "local",
-        "ar": "إنشاء الحساب المحلي نفسه على كل جهاز يحقق الإدارة المركزية.",
-        "en": "Creating that same local account on every computer achieves central management."
+        "ar": "إنشاء الحساب المحلي نفسه على كل جهاز يحقق الدخول الموحّد والنسخ المركزي، لأن الكلمة واحدة.",
+        "en": "Creating the same local account on every computer gives one sign-in and central backup, because the password is the same."
       }
     ],
     "correct": "cs",
@@ -1742,8 +1741,8 @@ const QUESTIONS = [
       "en": "Without a centre, one forgotten computer can keep an old right or an old copy."
     },
     "miss": {
-      "ar": "الكتاب يقول إن النظير إلى النظير يزداد صعوبة لا سهولة. وتكرار حساب محلي ليس إدارة مركزية.",
-      "en": "The textbook says peer-to-peer becomes harder, not easier. Copying a local account is not central management."
+      "ar": "النمو إلى ثمانين موظفاً يناسبه عميل وخادم مع دليل مركزي، مثل الدليل النشط، للحساب والأذونات والنسخ. تكرار حساب محلي ليس إدارة مركزية، والنظير إلى النظير يضعف عند هذا الحجم.",
+      "en": "Growth to eighty staff fits a client-server network with a central directory, such as Active Directory, for the account, permissions, and backup. Copying a local account is not central management, and peer-to-peer gets weaker at this size."
     }
   },
   {
@@ -1765,13 +1764,13 @@ const QUESTIONS = [
       },
       {
         "key": "same",
-        "ar": "الهاتف الشخصي يُدار كجهاز النطاق تماماً بمجرد إضافة البريد.",
-        "en": "A personal phone is managed exactly like a domain computer once email is added."
+        "ar": "الهاتف الشخصي يُدار كجهاز الشركة بمجرد إضافة البريد: التحديث وقفل الجهاز يُفرضان تلقائياً.",
+        "en": "The personal phone is managed like a company computer once email is added: updates and the device lock are enforced automatically."
       },
       {
         "key": "own",
-        "ar": "رفع الملفات ينقل الملكية والواجب القانوني إلى المزود.",
-        "en": "Uploading the files transfers ownership and the legal duty to the provider."
+        "ar": "رفع الملفات ينقل الأمان وواجب البيانات إلى المزود، لأن المؤسسة لم تعد تحتفظ بالنسخة.",
+        "en": "Uploading the files moves both security and the data duty to the provider, because the organisation no longer holds the copy."
       }
     ],
     "correct": "byod",
@@ -1784,8 +1783,8 @@ const QUESTIONS = [
       "en": "A lost phone or a late update exposes the email. A contract with the provider is still required."
     },
     "miss": {
-      "ar": "إضافة البريد لا تجعل الهاتف جهاز نطاق. والمزود لا يتملك البيانات ولا يسقط واجب المؤسسة.",
-      "en": "Adding email does not make the phone a domain computer. The provider does not own the data and does not cancel the organisation’s duty."
+      "ar": "الجهاز الخاص ليس تحت سيطرة كاملة وقد يتأخر تحديثه، وهذا جوهر إحضار الجهاز الشخصي. المزود قد يشغّل الحماية إن كان موثوقاً، وتبقى المؤسسة وحدة التحكم في البيانات.",
+      "en": "A personal device is not fully controlled and may be slow to update, which is the point of bring-your-own-device. The provider may run security if trusted, and the organisation remains the data controller."
     }
   },
   {
@@ -1807,13 +1806,13 @@ const QUESTIONS = [
       },
       {
         "key": "room",
-        "ar": "الجهاز يتحدث داخل الغرفة فقط ولا يصل إليه أحد من الإنترنت.",
-        "en": "The device talks only inside the room and cannot be reached from the internet."
+        "ar": "الكاميرا تخزّن الصورة فقط: اتصالها بالإنترنت للمشاهدة لا يفتح الجهاز ولا يكشف المكتب.",
+        "en": "The camera only stores the picture: its internet connection is for viewing and does not open the device or reveal the office."
       },
       {
         "key": "safe",
-        "ar": "الكاميرا تلغي خطر الاختراق لأنها تسجل غرفة الخادم.",
-        "en": "The camera removes the risk of intrusion because it records the server room."
+        "ar": "الوصول مصرّح به للحارس، فالجهاز خارج تعريف إنترنت الأشياء ما دام من يشاهده معروفاً.",
+        "en": "Access is authorised for the guard, so the device is outside the Internet of Things as long as the viewer is known."
       }
     ],
     "correct": "iot",
@@ -1826,8 +1825,8 @@ const QUESTIONS = [
       "en": "The benefit of remote watching does not remove the need for an update and a password on the device."
     },
     "miss": {
-      "ar": "تعريف هذه الأجهزة هو اتصالها بالإنترنت، لا انعزالها. والتسجيل لا يمنع اختراق الشبكة.",
-      "en": "These devices are defined by their internet connection, not by isolation. Recording does not stop a network intrusion."
+      "ar": "كاميرا المكتب المتصلة بالإنترنت جهاز إنترنت أشياء. إذا فُتحت قد تكشف خلو المكان أو تُعطَّل عبرها الحماية، حتى لو كانت المشاهدة مطلوبة للحارس.",
+      "en": "An office camera connected to the internet is an Internet of Things device. If it is compromised it may reveal that the office is empty or let protection be disabled, even when the guard is meant to watch it."
     }
   },
   {
@@ -1849,13 +1848,13 @@ const QUESTIONS = [
       },
       {
         "key": "sw",
-        "ar": "المبدّل يكفي، لأنه يقرأ كل إطار ويختار الشبكة الأخرى.",
-        "en": "A switch is enough, because it reads every frame and chooses the other network."
+        "ar": "المبدّل يكفي إذا عُرّفت عليه الشبكتان: هو يقرأ عنوان بروتوكول الإنترنت لا عنوان الجهاز فقط.",
+        "en": "A switch is enough if both networks are configured on it: it reads the Internet Protocol address, not only the device address."
       },
       {
         "key": "dns",
-        "ar": "نظام أسماء النطاقات هو الذي يفصل الشبكتين.",
-        "en": "The Domain Name System is what separates the two networks."
+        "ar": "بوابة على كل جهاز تكفي بلا موجه: القناع يوجّه الحزمة إلى الشبكة الأخرى.",
+        "en": "A gateway setting on each computer is enough with no router: the mask sends the packet to the other network."
       }
     ],
     "correct": "rtr",
@@ -1868,8 +1867,8 @@ const QUESTIONS = [
       "en": "Splitting reduces traffic across the whole network, as in the hierarchical layout."
     },
     "miss": {
-      "ar": "المبدّل لا يوجه بين نطاقين مختلفين. ونظام الأسماء يحوّل الاسم إلى عنوان ولا يفصل الشبكات.",
-      "en": "A switch does not route between two different ranges. The name system turns a name into an address; it does not separate networks."
+      "ar": "نقل الحزم بين 192.168.1.0 و192.168.2.0 عمل الموجه عبر جدول التوجيه. المبدّل يسلّم الإطار داخل الشبكة نفسها بحسب عنوان الجهاز، والقناع وحده لا ينقل الحزمة إلى الشبكة الثانية.",
+      "en": "Moving packets between 192.168.1.0 and 192.168.2.0 is the router’s job, using the routing table. A switch delivers a frame inside the same network by device address, and the mask alone does not move a packet to the second network."
     }
   },
   {
@@ -1891,13 +1890,13 @@ const QUESTIONS = [
       },
       {
         "key": "utp",
-        "ar": "كبل غير معزول لمسافة كيلومترين، لأنه أصعب تنصتًا من الألياف وحدّ المئة متر مجرد توصية.",
-        "en": "Unshielded cable for two kilometres, because it is harder to tap than fibre and the one-hundred-metre limit is only advice."
+        "ar": "كبل مجدول غير معزول لكل المسارات: حد المئة متر لا يسري داخل المصنع، والتنصت عليه أصعب من الألياف.",
+        "en": "Unshielded twisted pair for every path: the hundred-metre limit does not apply inside a factory, and it is harder to tap than fibre."
       },
       {
         "key": "rad",
-        "ar": "رابط لاسلكي واحد لكل ذلك، لأن الراديو أصعب اعتراضاً من الألياف ولا يتأثر بتداخل المصنع.",
-        "en": "One wireless link for all of it, because radio is harder to intercept than fibre and factory interference does not affect it."
+        "ar": "ألياف في المصنع والمسافة الطويلة، ولا كبل ولا لاسلكي في المكاتب: الألياف تغني عن التنقل بالأجهزة المحمولة.",
+        "en": "Fibre in the factory and over the long distance, and neither cable nor wireless in the offices: fibre removes the need for staff to move with laptops."
       }
     ],
     "correct": "mix",
@@ -1910,8 +1909,8 @@ const QUESTIONS = [
       "en": "The unshielded-cable limit is about 100 metres depending on category, not two kilometres."
     },
     "miss": {
-      "ar": "النحاس غير المعزول أسهل تسريباً من الألياف لا أصعب. والراديو يتأثر بالتداخل ويُعترض لأنه يبث.",
-      "en": "Unshielded copper leaks more easily than fibre, not less. Radio is affected by interference and can be intercepted because it broadcasts."
+      "ar": "التداخل في المصنع يناسبه كبل مجدول معزول. الكيلومتران يناسبهما الألياف لا النحاس غير المعزول، وحد المئة متر ليس توصية شكلية. التنقل بالأجهزة المحمولة داخل المكاتب يبرر لاسلكياً مشفّراً في ذلك الجزء فقط.",
+      "en": "Electrical interference in the factory fits shielded twisted pair. Two kilometres fits fibre, not unshielded copper, and the hundred-metre limit is not a formality. Staff moving with laptops inside the offices justifies encrypted wireless in that part only."
     }
   },
   {
@@ -1933,13 +1932,13 @@ const QUESTIONS = [
       },
       {
         "key": "swap",
-        "ar": "نظام الأسماء يوزع عناوين الشبكة المحلية، وبروتوكول التكوين يترجم أسماء المواقع.",
-        "en": "The name system hands out local addresses, and the configuration protocol translates website names."
+        "ar": "نظام الأسماء يوزع عنوان الجهاز عند التشغيل، وبروتوكول التكوين يحوّل اسم الموقع إلى رقم.",
+        "en": "The name system gives the computer its address at startup, and the configuration protocol turns a site name into a number."
       },
       {
         "key": "sw",
-        "ar": "المبدّل يختار عنواناً عاماً من نطاق 192.168 لكل جهاز.",
-        "en": "The switch chooses a public address from the 192.168 range for each device."
+        "ar": "الموجه يوزع العنوان ويحوّل الاسم معاً، فلا تُشغَّل الخدمتان منفصلتين.",
+        "en": "The router both gives out the address and translates the name, so the two services are not run separately."
       }
     ],
     "correct": "both",
@@ -1952,8 +1951,8 @@ const QUESTIONS = [
       "en": "If the name server fails, access by name stops even when the cable is fine."
     },
     "miss": {
-      "ar": "عكس الوظيفتين خطأ شائع. ونطاق 192.168 خاص لا عام، والمبدّل لا يوزع هذه العناوين.",
-      "en": "Swapping the two jobs is a common mistake. The 192.168 range is private, not public, and a switch does not hand out those addresses."
+      "ar": "بروتوكول التكوين الديناميكي للمضيف يوزع العناوين عند التشغيل. نظام أسماء النطاقات يحوّل الاسم إلى عنوان. الموجه ينقل الحزم ولا يغني عن الخدمتين.",
+      "en": "Dynamic Host Configuration Protocol gives out addresses at startup. The Domain Name System turns a name into an address. A router forwards packets and does not replace the two services."
     }
   },
   {
@@ -1975,13 +1974,13 @@ const QUESTIONS = [
       },
       {
         "key": "mail",
-        "ar": "443 لنقل البريد البسيط و80 لمكتب البريد، فالقاعدة تخص البريد.",
-        "en": "443 is simple mail transfer and 80 is the post office protocol, so the rule is about mail."
+        "ar": "80 هو التصفح الآمن و443 هو النص غير المشفّر، فالقاعدة تسمح بالآمن وتمنع العادي ولا تخص البريد.",
+        "en": "Port 80 is secure browsing and 443 is unencrypted text, so the rule allows the secure port, blocks the ordinary one, and is not about mail."
       },
       {
         "key": "ftp",
-        "ar": "20 هو التصفح الآمن و443 نقل الملفات، فالقاعدة تمنع نقل الملفات.",
-        "en": "20 is secure browsing and 443 is file transfer, so the rule blocks file transfer."
+        "ar": "443 لنقل الملفات و80 للبريد، فمنع 80 يوقف البريد لا صفحات المتجر.",
+        "en": "Port 443 is file transfer and 80 is mail, so blocking 80 stops mail rather than the shop pages."
       }
     ],
     "correct": "web",
@@ -1994,8 +1993,8 @@ const QUESTIONS = [
       "en": "Packet capture helps administrators, and an intruder may use it to collect device addresses. Some devices refuse to answer ping so they do not reveal that they exist."
     },
     "miss": {
-      "ar": "أرقام البريد والملفات في الجدول ليست 443 و80 بهذا التوزيع.",
-      "en": "The mail and file numbers in the table are not 443 and 80 in that pairing."
+      "ar": "80 لنقل النص التشعبي غير المشفّر و443 لنسخته الآمنة. البريد على 25 أو 110، ونقل الملفات على 20 و21. من يلتقط الحزم قد يرى العناوين حتى لو كانت القاعدة صحيحة.",
+      "en": "Port 80 is unencrypted Hypertext Transfer Protocol and 443 is the secure version. Mail uses 25 or 110, and file transfer uses 20 and 21. Someone capturing packets may still see the addresses even when the rule is right."
     }
   },
   {
@@ -2017,13 +2016,13 @@ const QUESTIONS = [
       },
       {
         "key": "pub",
-        "ar": "عناوين 192.168 عامة ويجب إعلانها على الإنترنت.",
-        "en": "192.168 addresses are public and should be advertised on the internet."
+        "ar": "هذه عناوين خاصة تعمل على الإنترنت مباشرة إذا سمح الجدار بها، والترجمة تُستخدم فقط عند نفاد العناوين العامة.",
+        "en": "These private addresses work on the internet directly if the firewall allows them. Translation is used only when public addresses run out."
       },
       {
         "key": "v6",
-        "ar": "العنوان الخاص لا يعمل إلا بإصدار بروتوكول الإنترنت السادس، فلا تُستخدم الترجمة.",
-        "en": "A private address works only with Internet Protocol version 6, so translation is not used."
+        "ar": "192.168 عنوان عام محجوز للشركات، فيُعلن كما هو بلا ترجمة ومن دون الإصدار السادس.",
+        "en": "192.168 is a public range reserved for companies, so it is advertised as it is, with no translation and no need for version 6."
       }
     ],
     "correct": "nat",
@@ -2036,8 +2035,8 @@ const QUESTIONS = [
       "en": "Advertising a private address on the internet breaks this design."
     },
     "miss": {
-      "ar": "192.168 ليس عاماً. والترجمة تُستخدم مع الإصدار الرابع الخاص على نطاق واسع، ولا تنتظر الإصدار السادس.",
-      "en": "192.168 is not public. Translation is widely used with private version 4, and it does not wait for version 6."
+      "ar": "192.168.1.10 عنوان خاص لا يُوجَّه على الإنترنت. ترجمة عنوان الشبكة تربطه بالعنوان العام الواحد. ليس عنواناً عاماً، والإصدار السادس ليس شرطاً لعمل هذه الترجمة.",
+      "en": "192.168.1.10 is a private address and is not routed on the internet. Network address translation ties it to the single public address. It is not a public address, and version 6 is not a condition for that translation."
     }
   },
   {
@@ -2059,13 +2058,13 @@ const QUESTIONS = [
       },
       {
         "key": "one",
-        "ar": "شبكة واحدة للجميع أأمن، لأن جدار حماية واحد يكفي.",
-        "en": "One network for everyone is safer, because a single firewall is enough."
+        "ar": "شبكة واحدة بكلمة قوية، مع عزل بالجدار حسب اسم المستخدم: فصل شبكة الضيوف تكرار.",
+        "en": "One network with a strong password, and firewall separation by username: a separate guest network is duplicate work."
       },
       {
         "key": "hide",
-        "ar": "إخفاء اسم شبكة الضيوف يفصلها عن الشبكة الداخلية.",
-        "en": "Hiding the guest network’s name separates it from the internal network."
+        "ar": "نشر كلمة الموظفين في الاستقبال مقبول إذا أُخفي اسم الشبكة، لأن الضيف لا يراها في المسح.",
+        "en": "Publishing the staff password at reception is acceptable if the network name is hidden, because a guest will not see it in a scan."
       }
     ],
     "correct": "sep",
@@ -2078,8 +2077,8 @@ const QUESTIONS = [
       "en": "A password at reception is known to every visitor, so it is close to an open network."
     },
     "miss": {
-      "ar": "جدار واحد لا يعوض عزل الضيوف. وإخفاء الاسم لا يمنع الوصول إلى الخوادم الداخلية.",
-      "en": "One firewall does not replace isolating guests. Hiding the name does not block access to internal servers."
+      "ar": "الضيف على شبكة الموظفين قد يصل إلى الأنظمة الداخلية. العزل بالاسم لا يغني عن شبكة ضيوف منفصلة، وإخفاء الاسم لا يحمي كلمة كُتبت في الاستقبال.",
+      "en": "A guest on the staff network may reach internal systems. Separation by username does not replace a separate guest network, and hiding the name does not protect a password written at reception."
     }
   },
   {
@@ -2101,13 +2100,13 @@ const QUESTIONS = [
       },
       {
         "key": "low",
-        "ar": "الشدة منخفضة، لأن انتشار الأداة يعني أن الهجوم صار معروفاً فلم يعد خطراً.",
-        "en": "Severity is low, because a widely available tool means the attack is known and therefore no longer a risk."
+        "ar": "الشدة متوسطة: الأثر كبير لكن المهارة منخفضة، فيُنزَّل التقدير لأن الأداة الجاهزة ليست هجوماً متقدماً.",
+        "en": "The severity is moderate: the impact is high but the skill is low, so the rating drops because a ready-made tool is not an advanced attack."
       },
       {
         "key": "acc",
-        "ar": "تُقبل المخاطر الشديدة لتوفير المال، ويُنفق على المخاطر الطفيفة.",
-        "en": "Severe risks are accepted to save money, and spending goes to slight risks."
+        "ar": "تُقبل هذه المخاطر لأنها معلنة، ويُنفق الجهد على تهديد غير معروف ولو كان أثره أصغر.",
+        "en": "This risk is accepted because it is public, and the effort is spent on an unknown threat even if its impact is smaller."
       }
     ],
     "correct": "sev",
@@ -2120,8 +2119,8 @@ const QUESTIONS = [
       "en": "Treat the higher severity before the lower. Acceptance fits low severity."
     },
     "miss": {
-      "ar": "شهرة الثغرة تزيد الاستغلال. وعكس ترتيب الميزانية يترك أخطر بند بلا علاج.",
-      "en": "A well-known flaw is exploited more, not less. Reversing the budget leaves the most serious item untreated."
+      "ar": "أداة جاهزة يستغلها أي شخص ترفع الاحتمال إلى عالٍ جداً، ومع أثر كبير تكون الشدة شديدة وتُعالج أولاً. شيوع الأداة لا يخفّض التقدير، والمخاطر الشديدة لا تُقبل لتوفير المال.",
+      "en": "A ready-made tool anyone can use pushes likelihood to very high, and with a high impact the severity is severe and is treated first. A common tool does not lower the rating, and severe risks are not accepted to save money."
     }
   },
   {
@@ -2143,13 +2142,13 @@ const QUESTIONS = [
       },
       {
         "key": "usb",
-        "ar": "يُقبل خطر البطاقات، وتُصرف الميزانية على منع الذاكرات فقط.",
-        "en": "Accept the card risk, and spend the budget only on banning the sticks."
+        "ar": "يُنقل النسخ إلى السحابة أولاً لأن النقل يزيل خطر البطاقات، وتُؤجل الثغرة المعروفة إلى ما بعد النقل.",
+        "en": "Move the backups to the cloud first, because the move removes the card risk, and leave the known flaw until after the move."
       },
       {
         "key": "duty",
-        "ar": "نقل النسخ يسقط الواجب القانوني بالكامل عن المؤسسة.",
-        "en": "Moving the backups removes the legal duty from the organisation completely."
+        "ar": "يُعالج خطر البطاقات فقط، ويُحذف منع الذاكرات من الخطة لأن الخطر المنخفض لا يُسجَّل.",
+        "en": "Treat the card risk only, and drop the ban on removable drives from the plan because a low risk is not recorded."
       }
     ],
     "correct": "mix",
@@ -2162,8 +2161,8 @@ const QUESTIONS = [
       "en": "Portable storage carries harmful software and is easily lost, but that does not outrank a card leak."
     },
     "miss": {
-      "ar": "قبول الشديد يخالف ترتيب الكتاب. والسحابة لا تجعل المزود مالكاً للواجب القانوني.",
-      "en": "Accepting a severe risk contradicts the textbook’s order. The cloud does not make the provider the owner of the legal duty."
+      "ar": "الخطر الشديد يُعالج أولاً، ومنع الذاكرة المحمولة يبقى إجراءً مناسباً للخطر المنخفض ولا يُحذف. نقل النسخ لا يصلح ثغرة الموقع، ولا يسقط عن المؤسسة أنها وحدة التحكم.",
+      "en": "The severe risk is treated first, and stopping removable drives stays a fitting control for the low risk and is not dropped. Moving the backups does not fix the website flaw, and it does not remove the organisation’s role as data controller."
     }
   },
   {
@@ -2185,13 +2184,13 @@ const QUESTIONS = [
       },
       {
         "key": "name",
-        "ar": "تكفي أسماء الأجهزة، لأن المدير لا يحتاج معرفة التهديد.",
-        "en": "The device names are enough, because a manager does not need to know the threat."
+        "ar": "يُذكر اسم الجهاز والتهديد التقني فقط: المدير غير المتخصص يقيس الخطة بعدد المصطلحات.",
+        "en": "Name the device and the technical threat only: a non-specialist manager judges the plan by how many terms it contains."
       },
       {
         "key": "feat",
-        "ar": "يُختار المنتج الأكثر مزايا حتى لو كان الخطر المقابل منخفضاً.",
-        "en": "Choose the product with the most features even if the matching risk is low."
+        "ar": "يُكتفى بكلفة الشراء: المبرر المالي يغني عن ربط البند بالتهديد الذي يقابله.",
+        "en": "The purchase cost is enough: a financial reason removes the need to link the control to the threat it answers."
       }
     ],
     "correct": "why",
@@ -2204,8 +2203,8 @@ const QUESTIONS = [
       "en": "Without that link, a necessary protection budget may be refused, or a tool may be bought that does not match the risk."
     },
     "miss": {
-      "ar": "الاسم التقني لا يبرر الإنفاق. وكثرة المزايا لا تتقدم على شدة الخطر.",
-      "en": "A technical name does not justify the spend. More features do not outrank the severity of the risk."
+      "ar": "العرض على مديرين غير متخصصين يربط كل بند بالتهديد بلغة الأثر والكلفة، لا باسم المنتج ولا بسعره وحده.",
+      "en": "A briefing for non-specialist managers links each control to the threat in the language of impact and cost, not by the product name or the price alone."
     }
   },
   {
@@ -2227,13 +2226,13 @@ const QUESTIONS = [
       },
       {
         "key": "thu",
-        "ar": "نسخة الخميس وحدها تحتوي ملفات الأسبوع كله.",
-        "en": "Thursday’s copy alone contains the whole week’s files."
+        "ar": "تُستعاد تزايدية الخميس وحدها: هي تضم كل ما تغيّر منذ الأحد، بما فيه ملفات النسخة الكاملة.",
+        "en": "Restore Thursday’s incremental copy alone: it holds everything that changed since Sunday, including the full copy’s files."
       },
       {
         "key": "room",
-        "ar": "التخزين في غرفة الخادم أفضل عند الحريق لأنه يسرّع الاستعادة.",
-        "en": "Storage in the server room is better in a fire because it speeds restoration."
+        "ar": "تُترك النسخ في غرفة الخادم إذا كان جهاز النسخ سليماً: النسخة خارج الموقع أبطأ عند الحريق.",
+        "en": "Leave the copies in the server room if the backup machine is intact: an off-site copy is slower in a fire."
       }
     ],
     "correct": "chain",
@@ -2246,8 +2245,8 @@ const QUESTIONS = [
       "en": "The recovery point objective is what may be lost since the last backup. The recovery time objective is how long the service may stay down."
     },
     "miss": {
-      "ar": "تزايدي الخميس لا يحتوي ملفات لم تتغير ذلك اليوم. والقرب من الخادم لا يحمي من الحريق.",
-      "en": "Thursday’s incremental does not contain files that did not change that day. Being next to the server does not protect against fire."
+      "ar": "التزايدية لا تُفهم من دون النسخة الكاملة قبلها، فتُستعاد نسخة الأحد ثم تزايديات الاثنين إلى الخميس. غرفة الخادم تحترق مع الجهاز، لذلك تُحفظ نسخة خارج الموقع.",
+      "en": "An incremental copy cannot be read without the full copy before it, so Sunday is restored and then Monday to Thursday. The server room burns with the machine, so a copy is kept off site."
     }
   },
   {
@@ -2269,13 +2268,13 @@ const QUESTIONS = [
       },
       {
         "key": "swap",
-        "ar": "هدف الوقت هو البيانات المفقودة، وهدف النقطة هو ساعات التوقف.",
-        "en": "The time objective is the lost data, and the point objective is the hours of downtime."
+        "ar": "هدف نقطة التعافي هو أقصى ساعات توقف مقبولة، وهدف وقت التعافي هو كم البيانات التي يجوز أن تُفقد.",
+        "en": "The recovery-point objective is the most hours of downtime that are acceptable, and the recovery-time objective is how much data may be lost."
       },
       {
         "key": "same",
-        "ar": "المصطلحان يعنيان سعر برنامج النسخ نفسه.",
-        "en": "The two terms both mean the price of the backup software."
+        "ar": "كلاهما يقيس ساعات التوقف: النقطة أثناء الحادث، والوقت بعد أن تعود الخدمة.",
+        "en": "Both measure hours of downtime: the point is during the incident, and the time is after the service returns."
       }
     ],
     "correct": "pair",
@@ -2288,8 +2287,8 @@ const QUESTIONS = [
       "en": "A bank may not accept losing a full day, while another organisation may accept a daily backup."
     },
     "miss": {
-      "ar": "عكس الاسمين خطأ شائع. والسعر ليس تعريف أي منهما.",
-      "en": "Swapping the two names is a common mistake. Price is the definition of neither."
+      "ar": "هدف وقت التعافي يحدّد كم ساعة يجوز أن تتوقف الخدمة. هدف نقطة التعافي يحدّد كم بيانات يجوز أن تُفقد منذ آخر نسخة صالحة. تبادل الاسمين يعكس المعنيين.",
+      "en": "The recovery-time objective sets how many hours the service may stay down. The recovery-point objective sets how much data may be lost since the last good copy. Swapping the names reverses the two meanings."
     }
   },
   {
@@ -2311,13 +2310,13 @@ const QUESTIONS = [
       },
       {
         "key": "wipe",
-        "ar": "تُحذف السجلات أولاً حتى لا يقلق الموظفون، ثم يُعاد البناء.",
-        "en": "Delete the logs first so staff are not alarmed, then rebuild."
+        "ar": "يُعاد بناء الخادم من النسخة أولاً ثم تُراجع السجلات: العزل يطيل التوقف بلا فائدة إذا كانت النسخة جاهزة.",
+        "en": "Rebuild the server from the copy first and review the logs afterwards: isolation only lengthens the outage when a copy is ready."
       },
       {
         "key": "wait",
-        "ar": "يُنتظر النسخ الأسبوعي قبل العزل حتى لا يتوقف العمل.",
-        "en": "Wait for the weekly backup before isolating anything, so work does not stop."
+        "ar": "تُقطع الكهرباء عن الخادم قبل العزل لحفظ الدليل كما هو، ثم يُبلَّغ الفريق.",
+        "en": "Power is cut before isolation so the evidence stays as it is, and the team is told afterwards."
       }
     ],
     "correct": "team",
@@ -2330,8 +2329,8 @@ const QUESTIONS = [
       "en": "Deleting the log destroys the trail of access and can harm any later case."
     },
     "miss": {
-      "ar": "البدء بالحذف أو بالانتظار يترك الإصابة تنتشر. العزل أولاً يقلل الضرر حتى لو توقف جزء من الخدمة.",
-      "en": "Starting with deletion or with waiting lets the infection spread. Isolation comes first, even if part of the service stops."
+      "ar": "ما دام الحادث مؤكداً والسجلات موجودة، فالفريق يعزل النظام ويحفظ السجلات والأدلة ثم يبلّغ الإدارة. إعادة البناء قبل الحفظ تضيع الأثر، وقطع الكهرباء أولاً ليس بديل العزل في هذه الحالة.",
+      "en": "Once the incident is confirmed and the logs are still there, the team isolates the system, preserves the logs and the evidence, then tells management. Rebuilding before preservation loses the trace, and cutting power first is not a substitute for isolation in this case."
     }
   },
   {
@@ -2353,13 +2352,13 @@ const QUESTIONS = [
       },
       {
         "key": "own",
-        "ar": "المزود يصبح المالك ووحدة التحكم بمجرد الرفع.",
-        "en": "The provider becomes the owner and the controller as soon as the data is uploaded."
+        "ar": "يكفي تشفير المزود والسعر: القانون يتبع بلد المؤسسة لا بلد التخزين، والمسؤولية تنتقل مع الملف.",
+        "en": "The provider’s encryption and the price are enough: the law follows the organisation’s country, not the country of storage, and liability moves with the file."
       },
       {
         "key": "price",
-        "ar": "السعر ونسبة التشغيل يكفيان، لأن بلد التخزين لا يؤثر في القانون.",
-        "en": "Price and uptime are enough, because the country of storage does not affect the law."
+        "ar": "المزود يصبح وحدة التحكم لأنه يلمس البيانات، وتبقى المؤسسة صاحبة العقد التجاري فقط.",
+        "en": "The provider becomes the controller because it handles the data, and the organisation remains only the party to the commercial contract."
       }
     ],
     "correct": "con",
@@ -2372,8 +2371,8 @@ const QUESTIONS = [
       "en": "If the contract is silent on deletion, customer data may remain with the provider after the relationship ends."
     },
     "miss": {
-      "ar": "السعر لا يحدد من يحاسب عند التسرب. والمزود لا يتملك البيانات.",
-      "en": "Price does not decide who is accountable after a leak. The provider does not take ownership of the data."
+      "ar": "العقد يحدد القانون والتشفير والمسؤولية وحل النزاع وحذف البيانات عند النهاية. بلد التخزين يغيّر القانون الواجب. المؤسسة تبقى وحدة التحكم ولو شغّل المزود الخدمة.",
+      "en": "The contract sets the law, the encryption, the liability, how disputes are resolved, and deletion at the end. The country of storage changes which law applies. The organisation stays the controller even if the provider runs the service."
     }
   },
   {
@@ -2395,13 +2394,13 @@ const QUESTIONS = [
       },
       {
         "key": "secret",
-        "ar": "القرصنة الأخلاقية تعني دخولاً سرياً بلا علم المؤسسة.",
-        "en": "Ethical hacking means a secret break-in without the organisation’s knowledge."
+        "ar": "يكفي أن ينظر المصمم بعد شهر من التشغيل: الاتفاق المسبق على الاختبار يكشف الثغرات فيضعف الفحص.",
+        "en": "It is enough that the designer looks a month after go-live: agreeing the test in advance reveals the flaws and weakens the test."
       },
       {
         "key": "note",
-        "ar": "الورقة مقبولة إذا كان صاحبها بجانبها، فالتنصت البصري خطر في المقاهي فقط.",
-        "en": "The note is acceptable if the owner sits beside it, because shoulder surfing is a risk only in cafes."
+        "ar": "الورقة على الشاشة تُعالج بعد الإطلاق، واختبار الاختراق يخص البرمجيات لا سلوك الموظف أمام مكتبه.",
+        "en": "The note on the screen is dealt with after launch, and a penetration test covers software, not how an employee behaves at the desk."
       }
     ],
     "correct": "pen",
@@ -2414,8 +2413,8 @@ const QUESTIONS = [
       "en": "A secret test can disrupt the system and falls outside the agreed method."
     },
     "miss": {
-      "ar": "القبعة البيضاء هنا إصلاح بإذن لا اقتحام مفاجئ. والورقة يراها الزميل والزائر داخل المكتب لا في المقهى فقط.",
-      "en": "A white hat here means fixing with permission, not a surprise break-in. A colleague or a visitor inside the office can read the note, not only someone in a cafe."
+      "ar": "قبل التشغيل تُراجع جهة خارجية ويُجرى اختبار اختراق بإذن ومنهج. الورقة على حافة الشاشة ثغرة مستخدم لا تُؤجل. الفحص بلا اتفاق مسبق ليس الاختبار المصرح به.",
+      "en": "Before go-live an outside party reviews the design and an authorised penetration test follows a written method. A note on the screen is a user weakness and is not postponed. A test with no prior agreement is not the authorised test."
     }
   },
   {
@@ -2437,13 +2436,13 @@ const QUESTIONS = [
       },
       {
         "key": "fw",
-        "ar": "المرفق الخارجي آمن إذا كان جدار الحماية يعمل، فسياسة البريد بلا قيمة أمنية.",
-        "en": "An external attachment is safe if the firewall is on, so an email policy has no security value."
+        "ar": "الجدار يمنع المرفق الضار، فتقتصر السياسة على الأسلوب المهين ولا حاجة لمنع المرفقات في النص.",
+        "en": "The firewall stops a harmful attachment, so the policy only needs to cover the insulting tone and need not ban attachments in writing."
       },
       {
         "key": "cs",
-        "ar": "الأسلوب المهذب خدمة عملاء فقط، وليس جزءاً من أمن المعلومات.",
-        "en": "A polite tone is customer service only, and not part of information security."
+        "ar": "التدريب على المرفقات يكفي، وتدقيق البريد مراقبة غير جائزة حتى على شبكة الشركة.",
+        "en": "Training on attachments is enough, and auditing email is unlawful monitoring even on the company network."
       }
     ],
     "correct": "pol",
@@ -2456,8 +2455,8 @@ const QUESTIONS = [
       "en": "An unknown attachment is a common path for harmful software even when a firewall is present."
     },
     "miss": {
-      "ar": "الجدار لا يفتح المرفق نيابة عن الموظف ولا يحكم أسلوب الرسالة. والكتاب يضع الأسلوب المهني داخل سياسة البريد الأمنية.",
-      "en": "The firewall does not open the attachment for the employee and does not govern the tone of the message. The textbook places professional tone inside the email security policy."
+      "ar": "سياسة البريد والإنترنت تجمع منع المرفق المجهول والأسلوب المهني مع التدريب والتدقيق. الجدار لا يفتح المرفق بدل الموظف ولا يحكم نص الرسالة. التدقيق على شبكة الشركة جزء من السياسة إذا أُبلغ الموظفون.",
+      "en": "The email and internet policy combines the ban on unknown attachments and a professional tone with training and audit. The firewall does not open the attachment for the employee and does not govern the wording. Audit on the company network is part of the policy when staff have been told."
     }
   },
   {
@@ -2479,13 +2478,13 @@ const QUESTIONS = [
       },
       {
         "key": "same",
-        "ar": "المفتاح نفسه عام وخاص، فمن يفتح الصفحة يفك تشفير البطاقة.",
-        "en": "The same key is both public and private, so anyone who opens the page can decrypt the card."
+        "ar": "المفتاح العام على الخادم يفك التشفير، والمفتاح الخاص في المتصفح يشفّر البطاقة. الشهادة تثبت المتصفح لا الموقع.",
+        "en": "The public key on the server decrypts, and the private key in the browser encrypts the card. The certificate proves the browser, not the site."
       },
       {
         "key": "spell",
-        "ar": "البروتوكول الآمن يتحقق من إملاء العنوان فقط ولا يشفّر الدفع.",
-        "en": "The secure protocol only checks the spelling of the address and does not encrypt the payment."
+        "ar": "القفل يعني مفتاحاً واحداً ظاهراً في الشهادة: من يملك الشهادة يقرأ رقم البطاقة.",
+        "en": "The padlock means one key shown in the certificate: whoever has the certificate can read the card number."
       }
     ],
     "correct": "key",
@@ -2498,8 +2497,8 @@ const QUESTIONS = [
       "en": "Without a valid certificate, the page may be a phishing copy even if a lock symbol is shown."
     },
     "miss": {
-      "ar": "نشر المفتاح الخاص يلغي سرية البطاقة. والبروتوكول الآمن يشفر المحتوى ولا يكتفي بشكل العنوان.",
-      "en": "Publishing the private key removes the secrecy of the card. The secure protocol encrypts the content; it does not only look at the address."
+      "ar": "المفتاح العام يشفّر وما يقابله الخاص، وهو على الخادم، يفك التشفير. الشهادة تربط المفتاح العام بهوية الموقع. ليس المفتاح نفسه في الاتجاهين، والشهادة ليست مفتاح قراءة البطاقة. الجزء الأكبر من البيانات يُشفَّر بمفتاح جلسة.",
+      "en": "The public key encrypts and the matching private key, which stays on the server, decrypts. The certificate binds the public key to the site’s identity. The same key is not used both ways, and the certificate is not the key that reads the card. Most of the data is encrypted with a session key."
     }
   },
   {
@@ -2521,13 +2520,13 @@ const QUESTIONS = [
       },
       {
         "key": "off",
-        "ar": "سحب الكهرباء يحفظ الذاكرة لأنها تُكتب تلقائياً في صورة القرص.",
-        "en": "Pulling the power saves memory because it is written automatically into the disk image."
+        "ar": "تُؤخذ صورة القرص أولاً والجهاز يعمل، ثم الذاكرة: الصورة إذا تأخرت تتغير محتوياتها.",
+        "en": "Take the disk image first while the computer is on, then the memory: if the image waits, its contents change."
       },
       {
         "key": "skip",
-        "ar": "تُصور الأقراص وتُهمل الذاكرة، لأن ما فيها ملفات مؤقتة بلا قيمة.",
-        "en": "Image the disks and ignore memory, because it holds only temporary files of no value."
+        "ar": "تُقطع الكهرباء بعد تصوير القرص، والذاكرة تُسترجع من ملف الإسبات فلا حاجة لالتقاطها حية.",
+        "en": "Power is cut after the disk image, and memory is recovered from the hibernation file, so it need not be captured live."
       }
     ],
     "correct": "ram",
@@ -2540,8 +2539,8 @@ const QUESTIONS = [
       "en": "Turning the computer off before capture loses that evidence."
     },
     "miss": {
-      "ar": "الذاكرة لا تُنسخ إلى القرص عند سحب الكهرباء. والكتاب يعد الملفات المؤقتة والمفاتيح دليلاً مهماً لا شيئاً يُهمل.",
-      "en": "Memory is not copied to the disk when the power is pulled. The textbook treats temporary files and keys as important evidence, not something to ignore."
+      "ar": "ذاكرة الوصول العشوائي الحية تضيع عند انقطاع الكهرباء ولا تُحفظ وحدها داخل صورة القرص. تُلتقط أولاً، وفيها المحادثة والاتصال المفتوحان، ثم تُؤخذ صورة القرص.",
+      "en": "Live random-access memory is lost when power is cut and is not kept by itself inside a disk image. It is captured first, including the open conversation and connection, and then the disk image is taken."
     }
   },
   {
@@ -2563,13 +2562,13 @@ const QUESTIONS = [
       },
       {
         "key": "edit",
-        "ar": "تعديل الأصل أولاً يجعل التقرير مطابقاً لجهاز نظيف.",
-        "en": "Changing the original first makes the report match a clean computer."
+        "ar": "يُحذف الملف المشبوه من الأصل بعد مطابقة الصورة معه، حتى لا يبقى البرنامج الضار داخل الدليل المحفوظ.",
+        "en": "Delete the suspicious file from the original after the image is checked against it, so the harmful program does not stay inside the preserved evidence."
       },
       {
         "key": "fast",
-        "ar": "فحص الأصل مباشرة أسرع ولا يؤثر في قبول الدليل.",
-        "en": "Examining the original directly is faster and does not affect whether the evidence is accepted."
+        "ar": "يُحلل الأصل ما دامت الصورة محفوظة: أي تعديل لاحق يظهر عند المقارنة بين الاثنين.",
+        "en": "Analyse the original as long as the image is kept: any later change shows up when the two are compared."
       }
     ],
     "correct": "img",
@@ -2582,8 +2581,8 @@ const QUESTIONS = [
       "en": "Changing the original weakens the use of the evidence in court."
     },
     "miss": {
-      "ar": "تنظيف الجهاز قبل التصوير يمحو ما يُراد إثباته. والسرعة لا تتقدم على سلامة الدليل.",
-      "en": "Cleaning the computer before imaging erases what you are trying to prove. Speed does not outrank the integrity of the evidence."
+      "ar": "الأصل يُحفظ بلا تعديل، والتحليل يجري على الصورة. حذف ملف من الأصل، حتى بعد التصوير، يغيّر الدليل الذي قد يُطلب كما ضُبط.",
+      "en": "The original is kept unchanged, and the analysis runs on the image. Deleting a file from the original, even after imaging, changes evidence that may need to be shown as it was seized."
     }
   },
   {
@@ -2605,13 +2604,13 @@ const QUESTIONS = [
       },
       {
         "key": "fw",
-        "ar": "الفشل المتكرر يثبت أن جدار الحماية يعمل، فلا حاجة لمراجعة الحساب.",
-        "en": "Repeated failure proves the firewall is working, so the account does not need review."
+        "ar": "الدخول الناجح ليلاً يناسب موظف مناوبة نسي الكلمة ثم أدخلها، فلا يُراجع نشاط الحساب بعد النجاح.",
+        "en": "A successful night login fits a shift worker who forgot the password and then typed it, so activity after the success is not reviewed."
       },
       {
         "key": "ok",
-        "ar": "هذا طبيعي بعد تغيير سياسة الكلمات، ويُهمل إذا تبعه نجاح.",
-        "en": "This is normal after a password-policy change, and it can be ignored if a success follows."
+        "ar": "الفشل ثم النجاح يثبت أن قفل الحساب يعمل: الحساب الذي دخل في النهاية لم يُختَرق.",
+        "en": "Failure and then success proves the account lock works: an account that got in at the end was not compromised."
       }
     ],
     "correct": "guess",
@@ -2624,8 +2623,8 @@ const QUESTIONS = [
       "en": "A night-time success makes it less likely that the employee merely forgot the password during the working day."
     },
     "miss": {
-      "ar": "فشل الدخول ليس من سجل جدار الحماية بالضرورة. والنجاح بعد الفشل قد يعني أن التخمين نجح لا أن الحادث انتهى.",
-      "en": "Failed sign-in is not automatically a firewall log. Success after failure may mean the guessing worked, not that the incident is over."
+      "ar": "محاولات فاشلة كثيرة ثم نجاح، وخصوصاً ليلاً، قد تعني تخمين كلمة المرور. الوقت سبب لمراجعة ما فعله الحساب بعد الدخول، لا لتفسيره بمناوبة ولا بنجاح سياسة القفل.",
+      "en": "Many failures and then a success, especially at night, may mean the password was guessed. The time is a reason to review what the account did after entry, not to explain it as a shift or as a lockout policy working."
     }
   },
   {
@@ -2647,13 +2646,13 @@ const QUESTIONS = [
       },
       {
         "key": "dos",
-        "ar": "محاكاة قطع الخدمة على النظام المباشر أفضل طريقة لإنتاج الدليل.",
-        "en": "Simulating denial of service on the live system is the best way to produce evidence."
+        "ar": "محاكاة قطع الخدمة على النظام المباشر مقبولة خارج ساعات العيادة، حتى إذا لم يُكتب المنهج مسبقاً.",
+        "en": "Simulating denial of service on the live system is acceptable outside clinic hours, even if the method was not written down beforehand."
       },
       {
         "key": "none",
-        "ar": "المقابلات تغني عن السجلات، فالسجل الرقمي لا يصلح دليلاً.",
-        "en": "Interviews replace logs, because a digital log cannot be evidence."
+        "ar": "جمع سجلات الجدار والموجه يغيّر الأجهزة، لذلك تُفضَّل المقابلات ويُترك السجل الرقمي.",
+        "en": "Collecting firewall and router logs changes the devices, so interviews are preferred and the digital log is left alone."
       }
     ],
     "correct": "pass",
@@ -2666,8 +2665,8 @@ const QUESTIONS = [
       "en": "The log can show the source of the attempts without stopping the clinic."
     },
     "miss": {
-      "ar": "اختبار يعطل النظام الحي يضر الدليل والخدمة معاً. والكتاب يعتمد سجلات الجدار والموجه نقاط وصول لا المقابلة وحدها.",
-      "en": "A test that stops the live system harms both the evidence and the service. The textbook relies on firewall, router, and access-point logs, not on interviews alone."
+      "ar": "يُتفق على المنهج ويُؤخذ الإذن. سجلات جدار الحماية والموجه تُجمع بشكل سلبي. قطع الخدمة على نظام العيادة المباشر ليس جمع دليل، وتغيير الساعة لا يغني عن المنهج المكتوب.",
+      "en": "The method is agreed and permission is obtained. Firewall and router logs are collected passively. Denial of service against the live clinic system is not evidence collection, and changing the hour does not replace a written method."
     }
   },
   {
@@ -2689,13 +2688,13 @@ const QUESTIONS = [
       },
       {
         "key": "clean",
-        "ar": "تُنظف الغرفة فوراً لتعود إلى العمل قبل أي تصوير.",
-        "en": "Clean the room at once so work can resume before any photographs."
+        "ar": "يُستجوب المناوبون أولاً، وتُفتح الكاميرا وسجل البطاقة فقط إذا تعارضت الأقوال.",
+        "en": "Question the staff on duty first, and open the camera and the card log only if the accounts conflict."
       },
       {
         "key": "post",
-        "ar": "تُنشر كلمة مدير النظام للموظفين ليفحصوا أجهزتهم بأنفسهم.",
-        "en": "Publish the administrator password to staff so they can check their own computers."
+        "ar": "يُستبدل القفل فوراً ويُكتفى بذلك: سجل البطاقة يُمسح كل صباح فلا يفيد بعد الفقد.",
+        "en": "Replace the lock at once and stop there: the card log is wiped every morning, so it is useless after the loss."
       }
     ],
     "correct": "cctv",
@@ -2708,8 +2707,8 @@ const QUESTIONS = [
       "en": "People’s safety comes first if there is danger. Then preserve the evidence before the place is cleaned."
     },
     "miss": {
-      "ar": "التنظيف يمسح الأثر. ونشر كلمة المدير يوسّع الوصول بدل أن يحصره.",
-      "en": "Cleaning removes the trace. Publishing the administrator password widens access instead of limiting it."
+      "ar": "أول ما يُحفظ لقطات الكاميرات وسجل البطاقة: من دخل الغرفة ومتى. الاستجواب لا يتقدّم على هذا الدليل، وتغيير القفل لا يسترجع أثر الدخول.",
+      "en": "The first things preserved are the camera pictures and the card log: who entered the room and when. Interviews do not come before that evidence, and changing the lock does not recover the trace of the entry."
     }
   },
   {
@@ -2731,13 +2730,13 @@ const QUESTIONS = [
       },
       {
         "key": "later",
-        "ar": "تُؤجل الملاحظات إلى نهاية الأسبوع حتى يكتمل التقرير مرة واحدة.",
-        "en": "Postpone the notes until the end of the week so the report is written once."
+        "ar": "تُكتب الملاحظات عند إغلاق القضية دفعة واحدة، حتى لا يضطرب التقرير بمواعيد متفرقة.",
+        "en": "Notes are written once when the case closes, so the report is not disturbed by scattered times."
       },
       {
         "key": "all",
-        "ar": "كل ما جُمع يُعد مرتبطاً بالحادث بلا حاجة إلى مطابقة الوقت.",
-        "en": "Everything collected counts as linked to the incident, with no need to match the time."
+        "ar": "كل ما جُمع في البداية مرتبط بالحادث، ومطابقة الوقت تلزم فقط إذا نازع أحد في الدليل.",
+        "en": "Everything collected at the start is linked to the incident, and matching the time is needed only if someone disputes the evidence."
       }
     ],
     "correct": "time",
@@ -2750,8 +2749,8 @@ const QUESTIONS = [
       "en": "Collecting extra material first is acceptable, then it is sorted. Deleting early may lose useful evidence."
     },
     "miss": {
-      "ar": "التأجيل يضيع التفاصيل. والارتباط بالحادث يُثبت بالوقت والمحتوى لا بالجمع وحده.",
-      "en": "Delay loses detail. A link to the incident is shown by time and content, not by collection alone."
+      "ar": "كل خطوة تُوثَّق قرب وقتها، ثم يُقارن الدليل بوقت الحادث لتمييز ما لا يخصه، كالإنذار الكاذب. التأجيل يضعف التسلسل، والجمع المبكر لا يعني أن كل قطعة تخص الحادث.",
+      "en": "Each step is recorded close to the time it happens, then the evidence is compared with the time of the incident to separate what does not belong, such as a false alarm. Waiting weakens the sequence, and early collection does not mean every item belongs to the incident."
     }
   },
   {
@@ -2773,13 +2772,13 @@ const QUESTIONS = [
       },
       {
         "key": "gone",
-        "ar": "الحذف يزيل الملف نهائياً، فلا فائدة من صورة القرص.",
-        "en": "Deletion removes the file forever, so a disk image is useless."
+        "ar": "الحذف من السلة نهائي: الاستعادة ممكنة فقط إذا بقي الملف في سلة الأصل قبل إفراغها.",
+        "en": "Deletion from the recycle bin is final: recovery is possible only if the file is still in the original’s bin before it is emptied."
       },
       {
         "key": "empty",
-        "ar": "تفريغ سلة المحذوفات على الأصل أول خطوة حتى يصبح التقرير أقصر.",
-        "en": "Emptying the recycle bin on the original is the first step so the report is shorter."
+        "ar": "تُستعاد الملفات من الأصل لأنه ما زال يحملها، ثم تُؤخذ الصورة بعد الاستعادة حتى تتضمنها.",
+        "en": "Recover the files from the original because it still holds them, then take the image after recovery so the files are included."
       }
     ],
     "correct": "rec",
@@ -2792,8 +2791,8 @@ const QUESTIONS = [
       "en": "Emptying the bin on the original can destroy what remains of the trace."
     },
     "miss": {
-      "ar": "الحذف من وجهة نظر المستخدم لا يعني زوال البيانات من القرص دائماً. وتقصير التقرير لا يبرر مسح الدليل.",
-      "en": "Deletion from the user’s point of view does not always mean the data is gone from the disk. A shorter report does not justify wiping the evidence."
+      "ar": "التحليل يجري على النسخة لا على الأصل، وأدوات التحليل قد تعيد ملفات حُذفت. إفراغ السلة على الأصل يغيّر الدليل، والحذف لا يعني أن البيانات زالت دائماً.",
+      "en": "Analysis runs on the copy, not the original, and analysis tools may recover deleted files. Emptying the bin on the original changes the evidence, and deletion does not always mean the data is gone."
     }
   },
   {
@@ -2815,13 +2814,13 @@ const QUESTIONS = [
       },
       {
         "key": "run",
-        "ar": "إعادة التشغيل تغني عن التوصية، لأن الحادث لن يتكرر بعد الحذف.",
-        "en": "Restarting is enough recommendation, because the incident will not recur after deletion."
+        "ar": "تُكتب التوصيات إذا تكرر الحادث فقط: إعادة التشغيل بعد الاحتواء تغلق دورة الاستجابة.",
+        "en": "Recommendations are written only if the incident happens again: restarting after containment closes the response cycle."
       },
       {
         "key": "staff",
-        "ar": "يُكتفى بإبلاغ الموظفين شفهياً بلا توثيق ولا سجل تدريب.",
-        "en": "A spoken notice to staff is enough, with no written record and no training record."
+        "ar": "يكفي تدريب شفهي بلا تعديل سياسة: الاحتواء نجح، فالسياسة لم تكن سبب الحادث.",
+        "en": "Spoken training is enough with no policy change: containment worked, so the policy was not the cause."
       }
     ],
     "correct": "rec",
@@ -2834,11 +2833,10 @@ const QUESTIONS = [
       "en": "Restarting restores the service; it does not close the weakness that allowed the incident."
     },
     "miss": {
-      "ar": "البلاغ الشفهي يُنسى. التدريب المسجل والتعديل المكتوب هما ما يغير السلوك لاحقاً.",
-      "en": "A spoken notice is forgotten. Recorded training and a written change are what alter behaviour later."
+      "ar": "بعد الاستعادة تُكتب توصيات قد تشمل تعديل سياسة أو تدريباً أو وسيلة حماية إضافية. نجاح الاحتواء لا يلغي التوصية، والتدريب الشفهي بلا توثيق لا يغني عن مراجعة السبب.",
+      "en": "After recovery, recommendations are written and may include a policy change, training, or an extra control. Successful containment does not cancel the recommendation, and undocumented spoken training does not replace looking at the cause."
     }
   }
-
 ];
 
 const UI = {
@@ -3016,13 +3014,23 @@ function tone(ok) {
       osc.start(now);
       osc.stop(now + 0.44);
     } else {
-      osc.type = "sawtooth";
-      osc.frequency.setValueAtTime(220, now);
-      osc.frequency.exponentialRampToValueAtTime(70, now + 0.45);
-      gain.gain.exponentialRampToValueAtTime(0.04, now + 0.02);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.5);
-      osc.start(now);
-      osc.stop(now + 0.52);
+      osc.disconnect();
+      gain.disconnect();
+      const ding = (freq, t0, dur) => {
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o.type = "sine";
+        o.frequency.setValueAtTime(freq, t0);
+        o.connect(g);
+        g.connect(audioCtx.destination);
+        g.gain.setValueAtTime(0.0001, t0);
+        g.gain.exponentialRampToValueAtTime(0.04, t0 + 0.012);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        o.start(t0);
+        o.stop(t0 + dur + 0.02);
+      };
+      ding(311.13, now, 0.16);
+      ding(246.94, now + 0.15, 0.24);
     }
   } catch (err) {
     /* audio is optional */
