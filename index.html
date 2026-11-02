@@ -3194,7 +3194,7 @@ function reportHtml() {
   </section>`;
 }
 
-const SHEET_URL = "";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbxu5XsIVoLxmbXUsOczsG5WJiFzqtqsmuQdr8BjKuP1-QjIXuf-OIr1J61SwSzSPrM/exec";
 
 function submitResult() {
   const box = document.getElementById("sheetStatus");
@@ -3237,7 +3237,17 @@ function submitResult() {
       outcomeA: groups.A[0] + "/" + groups.A[1],
       outcomeB: groups.B[0] + "/" + groups.B[1],
       outcomeC: groups.C[0] + "/" + groups.C[1],
-      outcomeD: groups.D[0] + "/" + groups.D[1]
+      outcomeD: groups.D[0] + "/" + groups.D[1],
+      items: QUESTIONS.map((q, i) => {
+        const chosen = q.choices.find((c) => c.key === state.answers[i]);
+        return {
+          n: i + 1,
+          code: q.code,
+          lo: q.lo,
+          ok: state.answers[i] === q.correct ? 1 : 0,
+          pick: chosen ? chosen.ar : ""
+        };
+      })
     })
   }).then(() => {
     state.sent = true;
